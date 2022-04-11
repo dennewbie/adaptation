@@ -13,8 +13,10 @@ class GameScene: SKScene {
     var User = SKSpriteNode()
     var cam = SKCameraNode()
     var maze = SKSpriteNode()
+    var obstacles :[SKSpriteNode] = [SKSpriteNode]()
+    var previousTime = TimeInterval()
     
-    let speed = 2.1
+    let Speed = 2.1
 
     
     override func didMove(to view: SKView) {
@@ -22,6 +24,7 @@ class GameScene: SKScene {
         Start = self.childNode(withName: "Start") as! SKSpriteNode
         End = self.childNode(withName: "End") as! SKSpriteNode
         maze = self.childNode(withName: "Maze/Floor") as! SKSpriteNode
+    
         
         //User Init
         UserInit()
@@ -73,22 +76,46 @@ class GameScene: SKScene {
     
     @objc func swipeRight(sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Right");
+        User.removeAllActions()
         User.run(SKAction.moveBy(x: maze.size.width , y:0, duration: speed))
     }
     
     @objc func swipeDown (sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Dowm")
-        User.run(SKAction.moveBy(x: 0, y: -maze.size.height, duration: speed))
+        User.removeAllActions()
+        User.run(SKAction.moveBy(x: 0, y: -(maze.size.height*2), duration: speed*2))
     }
     
     @objc func swipeUp (sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Up")
-        User.run(SKAction.moveBy(x: 0, y: maze.size.height, duration: speed))
+        User.removeAllActions()
+        User.run(SKAction.moveBy(x: 0, y: (maze.size.height*2), duration: speed*2))
     }
     
     @objc func swipeLeft (sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Left")
+        User.removeAllActions()
         User.run(SKAction.moveBy(x: -maze.size.width , y: 0, duration: speed))
     }
     
+    
+    /*override func update(_ currentTime: TimeInterval) {
+        for i in 1...13 {
+            obstacles.append(self.childNode(withName: "o\(i)") as! SKSpriteNode)
+        }
+        if (previousTime>0){
+            if (currentTime - previousTime)>1{
+                previousTime = currentTime
+                for i in 1...13 {
+                    obstacles[i].position = CGPoint(x: frame.midX - 100, y: frame.midY - 100)
+                }
+                
+            }
+            
+        }else{
+            previousTime = currentTime
+            
+        }
+        
+    }*/
 }
