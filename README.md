@@ -5,7 +5,8 @@ iOS Foundation Program Final Challenge App
 
 ### Keynote
 [Keynoten Mid-term review](https://github.com/dennewbie/adaptation/blob/main/key/midterm_review_group_c.pdf)
-[Keynoten Final pitch](https://github.com/dennewbie/adaptation/blob/main/key/midterm_review_group_c.pdf)
+
+[Keynoten Final pitch](link da aggiungere in futuro)
 
 ### Docs
 (da aggiungere in futuro)
