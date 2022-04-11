@@ -14,8 +14,7 @@ class GameScene: SKScene {
     var cam = SKCameraNode()
     var maze = SKSpriteNode()
     
-    let speed = 2.1
-
+    let Speed: CGFloat = 2.0
     
     override func didMove(to view: SKView) {
         //Init
@@ -73,22 +72,22 @@ class GameScene: SKScene {
     
     @objc func swipeRight(sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Right");
-        User.run(SKAction.moveBy(x: maze.size.width , y:0, duration: speed))
+        User.run(SKAction.moveBy(x: maze.size.width , y:0, duration: Speed))
     }
     
     @objc func swipeDown (sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Dowm")
-        User.run(SKAction.moveBy(x: 0, y: -maze.size.height, duration: speed))
+        User.run(SKAction.moveBy(x: 0, y: -maze.size.height, duration: Speed))
     }
     
     @objc func swipeUp (sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Up")
-        User.run(SKAction.moveBy(x: 0, y: maze.size.height, duration: speed))
+        User.run(SKAction.moveBy(x: 0, y: maze.size.height, duration: Speed))
     }
     
     @objc func swipeLeft (sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Left")
-        User.run(SKAction.moveBy(x: -maze.size.width , y: 0, duration: speed))
+        User.run(SKAction.moveBy(x: -maze.size.width , y: 0, duration: Speed))
     }
     
 }
