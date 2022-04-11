@@ -12,12 +12,16 @@ class GameScene: SKScene {
     var End = SKSpriteNode()
     var User = SKSpriteNode()
     var cam = SKCameraNode()
+    var maze = SKSpriteNode()
+    
+    let speed = 2.1
 
     
     override func didMove(to view: SKView) {
         //Init
         Start = self.childNode(withName: "Start") as! SKSpriteNode
         End = self.childNode(withName: "End") as! SKSpriteNode
+        maze = self.childNode(withName: "Maze/Floor") as! SKSpriteNode
         
         //User Init
         UserInit()
@@ -69,22 +73,22 @@ class GameScene: SKScene {
     
     @objc func swipeRight(sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Right");
-        User.run(SKAction.moveBy(x: 300, y:0, duration: 1))
+        User.run(SKAction.moveBy(x: maze.size.width , y:0, duration: speed))
     }
     
     @objc func swipeDown (sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Dowm")
-        User.run(SKAction.moveBy(x: 0, y: -300, duration: 1))
+        User.run(SKAction.moveBy(x: 0, y: -maze.size.height, duration: speed))
     }
     
     @objc func swipeUp (sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Up")
-        User.run(SKAction.moveBy(x: 0, y: 300, duration: 1))
+        User.run(SKAction.moveBy(x: 0, y: maze.size.height, duration: speed))
     }
     
     @objc func swipeLeft (sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Left")
-        User.run(SKAction.moveBy(x: -300 , y: 0, duration: 1))
+        User.run(SKAction.moveBy(x: -maze.size.width , y: 0, duration: speed))
     }
     
 }
