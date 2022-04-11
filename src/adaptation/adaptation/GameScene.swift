@@ -23,8 +23,10 @@ class GameScene: SKScene {
         UserInit()
        
         //Cam Create
-        cam.position = User.position
-        scene?.addChild(cam)
+        cam.xScale = 0.5
+        cam.yScale = 0.5
+        User.addChild(cam)
+        scene?.camera = cam
         
         //Swipe Init
         SwipeInit(view: view)
