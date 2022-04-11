@@ -11,9 +11,6 @@
 		52BD73FD280409130080A6F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD73FC280409130080A6F9 /* ContentView.swift */; };
 		52BD73FF280409140080A6F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BD73FE280409140080A6F9 /* Assets.xcassets */; };
 		52BD7402280409140080A6F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BD7401280409140080A6F9 /* Preview Assets.xcassets */; };
-		52D1A60B28047DD40066F36E /* WinContentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D1A60A28047DD40066F36E /* WinContentScene.swift */; };
-		52D1A60D28047E000066F36E /* WinContentScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 52D1A60C28047E000066F36E /* WinContentScene.sks */; };
-		52D1A61128047E960066F36E /* WinContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D1A61028047E960066F36E /* WinContentView.swift */; };
 		82E5E50B2804641E00E823FF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 82E5E5092804641E00E823FF /* GameScene.sks */; };
 		82E5E50C2804641E00E823FF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E5E50A2804641E00E823FF /* GameScene.swift */; };
 /* End PBXBuildFile section */
@@ -24,9 +21,6 @@
 		52BD73FC280409130080A6F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52BD73FE280409140080A6F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52BD7401280409140080A6F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		52D1A60A28047DD40066F36E /* WinContentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WinContentScene.swift; path = ../../../../../Documents/WinContentScene.swift; sourceTree = "<group>"; };
-		52D1A60C28047E000066F36E /* WinContentScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WinContentScene.sks; sourceTree = "<group>"; };
-		52D1A61028047E960066F36E /* WinContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinContentView.swift; sourceTree = "<group>"; };
 		82E5E5092804641E00E823FF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		82E5E50A2804641E00E823FF /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,9 +59,6 @@
 				82E5E50A2804641E00E823FF /* GameScene.swift */,
 				52BD73FA280409130080A6F9 /* adaptationApp.swift */,
 				52BD73FC280409130080A6F9 /* ContentView.swift */,
-				52D1A61028047E960066F36E /* WinContentView.swift */,
-				52D1A60A28047DD40066F36E /* WinContentScene.swift */,
-				52D1A60C28047E000066F36E /* WinContentScene.sks */,
 				52BD73FE280409140080A6F9 /* Assets.xcassets */,
 				52BD7400280409140080A6F9 /* Preview Content */,
 			);
@@ -140,7 +131,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52D1A60D28047E000066F36E /* WinContentScene.sks in Resources */,
 				52BD7402280409140080A6F9 /* Preview Assets.xcassets in Resources */,
 				82E5E50B2804641E00E823FF /* GameScene.sks in Resources */,
 				52BD73FF280409140080A6F9 /* Assets.xcassets in Resources */,
@@ -156,9 +146,7 @@
 			files = (
 				82E5E50C2804641E00E823FF /* GameScene.swift in Sources */,
 				52BD73FD280409130080A6F9 /* ContentView.swift in Sources */,
-				52D1A61128047E960066F36E /* WinContentView.swift in Sources */,
 				52BD73FB280409130080A6F9 /* adaptationApp.swift in Sources */,
-				52D1A60B28047DD40066F36E /* WinContentScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +275,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"adaptation/Preview Content\"";
+				DEVELOPMENT_TEAM = 563WBB4AAY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -315,6 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"adaptation/Preview Content\"";
+				DEVELOPMENT_TEAM = 563WBB4AAY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
