@@ -70,7 +70,6 @@ class GameScene: SKScene {
         let swiperLeft = UISwipeGestureRecognizer(target: self, action: #selector(GameScene.swipeLeft(sender:)))
         swiperLeft.direction = .left
         view.addGestureRecognizer(swiperLeft)
-//        
         
     }
 
