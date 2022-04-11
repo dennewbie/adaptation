@@ -6,18 +6,24 @@
 //
 
 import SpriteKit
+import SwiftUI
 
 class GameScene: SKScene {
     var Start = SKSpriteNode()
     var End = SKSpriteNode()
+    
     var User = SKSpriteNode()
+    
     var cam = SKCameraNode()
     var maze = SKSpriteNode()
-    var obstacles :[SKSpriteNode] = [SKSpriteNode]()
-    var previousTime = TimeInterval()
     
+//    var obstacles :[SKSpriteNode] = [SKSpriteNode]()
+//    var previousTime = TimeInterval()
+// Matrix 10 x 20  Alternate PAtter floor
+    
+        
     let Speed = 2.1
-
+    
     
     override func didMove(to view: SKView) {
         //Init
@@ -25,7 +31,6 @@ class GameScene: SKScene {
         End = self.childNode(withName: "End") as! SKSpriteNode
         maze = self.childNode(withName: "Maze/Floor") as! SKSpriteNode
     
-        
         //User Init
         UserInit()
        
@@ -35,8 +40,14 @@ class GameScene: SKScene {
         User.addChild(cam)
         scene?.camera = cam
         
-        //Swipe Init
+        let Settings = SKSpriteNode(imageNamed: "Setting")
+        Settings.position = CGPoint(x: 325, y: 617)
+        Settings.size = CGSize(width: 50, height: 50)
+        cam.addChild(Settings)
+        
+        //Swipe
         SwipeInit(view: view)
+        
     }
     
     func UserInit() {
