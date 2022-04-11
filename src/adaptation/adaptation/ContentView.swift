@@ -6,11 +6,20 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct ContentView: View {
+    var scene: SKScene {
+        let scene = SKScene(fileNamed: "GameScene")
+        scene!.size = CGSize(width: 750, height: 1334)
+        scene?.scaleMode = .aspectFit
+        return scene!
+    }
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        SpriteView(scene: scene)
+            .edgesIgnoringSafeArea(.all)
     }
 }
 
@@ -19,3 +28,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
