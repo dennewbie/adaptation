@@ -13,6 +13,7 @@
 		52BD7402280409140080A6F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BD7401280409140080A6F9 /* Preview Assets.xcassets */; };
 		82E5E50B2804641E00E823FF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 82E5E5092804641E00E823FF /* GameScene.sks */; };
 		82E5E50C2804641E00E823FF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E5E50A2804641E00E823FF /* GameScene.swift */; };
+		9E911C182804D27B003AD5FD /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E911C172804D27B003AD5FD /* LevelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		52BD7401280409140080A6F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		82E5E5092804641E00E823FF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		82E5E50A2804641E00E823FF /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		9E911C172804D27B003AD5FD /* LevelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				82E5E50A2804641E00E823FF /* GameScene.swift */,
 				52BD73FA280409130080A6F9 /* adaptationApp.swift */,
 				52BD73FC280409130080A6F9 /* ContentView.swift */,
+				9E911C172804D27B003AD5FD /* LevelView.swift */,
 				52BD73FE280409140080A6F9 /* Assets.xcassets */,
 				52BD7400280409140080A6F9 /* Preview Content */,
 			);
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82E5E50C2804641E00E823FF /* GameScene.swift in Sources */,
+				9E911C182804D27B003AD5FD /* LevelView.swift in Sources */,
 				52BD73FD280409130080A6F9 /* ContentView.swift in Sources */,
 				52BD73FB280409130080A6F9 /* adaptationApp.swift in Sources */,
 			);
