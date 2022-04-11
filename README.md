@@ -14,6 +14,7 @@ iOS Foundation Program Final Challenge App
 (da aggiungere in futuro)
 
 ### Team
+(link al profilo da aggiungere in futuro)
 - Ilardo Gianluca
 - Cioffi Simone
 - Improta Nicola
