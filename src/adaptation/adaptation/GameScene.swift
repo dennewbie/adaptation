@@ -13,11 +13,11 @@ class GameScene: SKScene {
     var End = SKSpriteNode()
     
     var User = SKSpriteNode()
-    
     var cam = SKCameraNode()
-    var maze = SKSpriteNode()
     
     var obstacles :[SKSpriteNode] = [SKSpriteNode]()
+    
+    var mazeSize = CGSize()
 
     var previousTime = TimeInterval()
     var floors = SKNode()
@@ -28,12 +28,6 @@ class GameScene: SKScene {
     
     
     override func didMove(to view: SKView) {
-        //Init
-        Start = self.childNode(withName: "Start") as! SKSpriteNode
-        End = self.childNode(withName: "End") as! SKSpriteNode
-        maze = self.childNode(withName: "Maze/Floor") as! SKSpriteNode
-    
-        
         creatingmaze(m: 10, n: 20)
         scene?.addChild(floors)
         
@@ -53,10 +47,6 @@ class GameScene: SKScene {
         
         //Swipe
         SwipeInit(view: view)
-        
-        //creatingmaze
-        creatingmaze(m: 10, n: 20)
-        
     }
     
     func UserInit() {
@@ -99,76 +89,102 @@ class GameScene: SKScene {
     @objc func swipeRight(sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Right");
         User.removeAllActions()
-        User.run(SKAction.moveBy(x: maze.size.width , y:0, duration: speed))
+        User.run(SKAction.moveBy(x: mazeSize.width , y:0, duration: speed))
     }
     
     @objc func swipeDown (sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Dowm")
         User.removeAllActions()
-        User.run(SKAction.moveBy(x: 0, y: -(maze.size.height*2), duration: speed*2))
+        User.run(SKAction.moveBy(x: 0, y: -(mazeSize.height*2), duration: speed*2))
     }
     
     @objc func swipeUp (sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Up")
         User.removeAllActions()
-        User.run(SKAction.moveBy(x: 0, y: (maze.size.height*2), duration: speed*2))
+        User.run(SKAction.moveBy(x: 0, y: (mazeSize.height*2), duration: speed*2))
     }
     
     @objc func swipeLeft (sender: UISwipeGestureRecognizer){
         debugPrint("Swipe Left")
         User.removeAllActions()
-        User.run(SKAction.moveBy(x: -maze.size.width , y: 0, duration: speed))
+        User.run(SKAction.moveBy(x: -mazeSize.width , y: 0, duration: speed))
     }
     
-    
-    override func update(_ currentTime: TimeInterval) {
-        for i in 1...13 {
-            obstacles.append(self.childNode(withName: "Maze/Obstacles/o\(i)") as! SKSpriteNode)
-        }
-        if (previousTime>0){
-            if (currentTime - previousTime)>5{
-                previousTime = currentTime
-                for i in 1...13 {
-                    var xr = Int.random(in: -294...274)
-                    var yr = Int.random(in: -603...610)
-                    obstacles[i].position = CGPoint(x: CGFloat(xr), y: CGFloat(yr))
-                }
-                
-            }
-            
-        }else{
-            previousTime = currentTime
-            
-        }
-        
-    }
+//
+//    override func update(_ currentTime: TimeInterval) {
+//        for i in 1...13 {
+//            obstacles.append(self.childNode(withName: "Maze/Obstacles/o\(i)") as! SKSpriteNode)
+//        }
+//        if (previousTime>0){
+//            if (currentTime - previousTime)>5{
+//                previousTime = currentTime
+//                for i in 1...13 {
+//                    var xr = Int.random(in: -294...274)
+//                    var yr = Int.random(in: -603...610)
+//                    obstacles[i].position = CGPoint(x: CGFloat(xr), y: CGFloat(yr))
+//                }
+//
+//            }
+//
+//        }else{
+//            previousTime = currentTime
+//
+//        }
+//
+//    }
     
     func creatingmaze(m: Int, n: Int) {
-        var floor = [[SKSpriteNode?]](repeating: [SKSpriteNode?](repeating: nil, count: n), count: m)
-        for i in 0..<m {
-            for j in 0..<n {
+        //reset mazew
+        floors.removeAllChildren();
+        //init maze
+        var floor = [[SKSpriteNode?]](repeating: [SKSpriteNode?](repeating: nil, count: n+1), count: m+1)
+        //for loop init
+        for i in 0..<m+1 {
+            for j in 0..<n+1 {
+                //Control for start & end
                 if (i == 1 && j == 1) {
-                    floor[i][j] = Start
+                    Start = SKSpriteNode(imageNamed: "confirmButton")
                     Start.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
+                    scene?.addChild(Start)
                 }
                 
-                if(i == n && j == m) {
-                    floor[i][j] = End
-                    End.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
-                    
-                }
-                if (j%2 == 0) {
-                    floor[i][j] = SKSpriteNode(imageNamed: "grayTileFloor")
-                    floor[i][j]?.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
-                    floors.addChild(floor[i][j]!)
-                }
-                else {
-                    floor[i][j] = SKSpriteNode(imageNamed: "whiteTileFloor")
-                    floor[i][j]?.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
-                    floors.addChild(floor[i][j]!)
+                if(i == m-1 && j == n-1) {
+                    End = SKSpriteNode(imageNamed: "confirmButton")
+                    End.position  = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
+                    scene?.addChild(End)
                 }
                 
+                //Control for wall
+                if (i == 0 || j == 0 || i == m || j == n){
+                    floor[i][j] = SKSpriteNode(imageNamed: "Walls")
+                    floor[i][j]?.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
+                    floor[i][j]?.size = CGSize(width: 170, height: 170)
+                    //wall Physics
+                    floor[i][j]?.physicsBody = SKPhysicsBody(rectangleOf: floor[i][j]!.size)
+                    floor[i][j]?.physicsBody?.affectedByGravity = false
+                    floor[i][j]?.physicsBody?.allowsRotation = false
+                    floor[i][j]?.physicsBody?.isDynamic = false
+                    floors.addChild(floor[i][j]!)
+                }else {
+                    //Control for floor placement
+                    if (j%2 == 0) {
+                        floor[i][j] = SKSpriteNode(imageNamed: "grayTileFloor")
+                        floor[i][j]?.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
+                        floor[i][j]?.size = CGSize(width: 170, height: 170)
+                        floors.addChild(floor[i][j]!)
+                    }
+                    else {
+                        floor[i][j] = SKSpriteNode(imageNamed: "whiteTileFloor")
+                        floor[i][j]?.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
+                        floor[i][j]?.size = CGSize(width: 170, height: 170)
+                        floors.addChild(floor[i][j]!)
+                    }
+
+                }
             }
         }
+        mazeSize = CGSize(width: 170*m+1, height: 170*m+1)
     }
 }
+
+
