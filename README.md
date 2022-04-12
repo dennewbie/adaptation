@@ -5,7 +5,6 @@ iOS Foundation Program Final Challenge App
 
 ### Keynote
 [Keynoten Mid-term review](https://github.com/dennewbie/adaptation/blob/main/key/midterm_review_group_c.pdf)
-
 [Keynoten Final pitch](link da aggiungere in futuro)
 
 ### Docs
@@ -15,7 +14,6 @@ iOS Foundation Program Final Challenge App
 (da aggiungere in futuro)
 
 ### Team
-(link al profilo da aggiungere in futuro)
 - [Ilardo Gianluca](https://github.com/gianlucailardo)
 - [Cioffi Simone](https://github.com/SimoneCff)
 - [Improta Nicola](https://github.com/NickSplitter)
