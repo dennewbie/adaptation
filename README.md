@@ -16,15 +16,15 @@ iOS Foundation Program Final Challenge App
 
 ### Team
 (link al profilo da aggiungere in futuro)
-- Ilardo Gianluca
-- Cioffi Simone
-- Improta Nicola
+- [Ilardo Gianluca](https://github.com/gianlucailardo)
+- [Cioffi Simone](https://github.com/SimoneCff)
+- [Improta Nicola](https://github.com/NickSplitter)
 - Fiengo Valeria
-- Cuccurullo Giuseppe
-- Scognamiglio Stefano
-- Piscitelli Carmine
-- Mungari Alfredo
-- Caruso Denny
+- [Cuccurullo Giuseppe](https://github.com/Giuseppe1899)
+- [Scognamiglio Stefano](https://github.com/Stefano-Scognamiglio)
+- [Piscitelli Carmine](https://github.com/Carmine1605)
+- [Mungari Alfredo](https://github.com/mungowz)
+- [Caruso Denny](https://github.com/dennewbie)
 
 a.a. 2021/2022
 
