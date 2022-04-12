@@ -167,14 +167,18 @@ class GameScene: SKScene {
                     floors.addChild(floor[i][j]!)
                 }else {
                     //Control for floor placement
-                    if (j%2 == 0) {
+                    if (j%2 == 0 && i%2 == 0) {
                         floor[i][j] = SKSpriteNode(imageNamed: "grayTileFloor")
                         floor[i][j]?.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
                         floor[i][j]?.size = CGSize(width: 170, height: 170)
                         floors.addChild(floor[i][j]!)
                     }
                     else {
+                        if (j%2 == 1 && i%2 == 1){
+                            floor[i][j] = SKSpriteNode(imageNamed: "grayTileFloor")
+                        }else{
                         floor[i][j] = SKSpriteNode(imageNamed: "whiteTileFloor")
+                        }
                         floor[i][j]?.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
                         floor[i][j]?.size = CGSize(width: 170, height: 170)
                         floors.addChild(floor[i][j]!)
