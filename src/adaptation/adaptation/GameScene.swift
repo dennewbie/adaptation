@@ -18,7 +18,7 @@ class GameScene: SKScene {
     var maze = SKSpriteNode()
     
     var obstacles :[SKSpriteNode] = [SKSpriteNode]()
-    var floor = [[SKSpriteNode?]](repeating: [SKSpriteNode?](repeating: nil, count: 20), count: 10)
+
     var previousTime = TimeInterval()
     var floors = SKNode()
 // Matrix 10 x 20  Alternate PAtter floor
@@ -144,9 +144,10 @@ class GameScene: SKScene {
     }
     
     func creatingmaze(m: Int, n: Int) {
+        var floor = [[SKSpriteNode?]](repeating: [SKSpriteNode?](repeating: nil, count: n), count: m)
         for i in 0..<m {
             for j in 0..<n {
-                if (i == 0 && j == 0) {
+                if (i == 1 && j == 1) {
                     floor[i][j] = Start
                     Start.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
                 }
