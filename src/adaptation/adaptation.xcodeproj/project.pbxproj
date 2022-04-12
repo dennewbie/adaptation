@@ -12,6 +12,9 @@
 		52121E5A28057E0F00CAE849 /* WinContentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5928057E0F00CAE849 /* WinContentScene.swift */; };
 		52121E5C2805901700CAE849 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5B2805901600CAE849 /* CustomButton.swift */; };
 		52121E5E2805909800CAE849 /* TwoHorizontalButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5D2805909800CAE849 /* TwoHorizontalButtonsView.swift */; };
+		525931192805DEC60028838F /* TitleMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931162805DEC60028838F /* TitleMenuView.swift */; };
+		5259311A2805DEC60028838F /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931172805DEC60028838F /* PauseView.swift */; };
+		5259311B2805DEC60028838F /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931182805DEC60028838F /* SliderView.swift */; };
 		52BD73FB280409130080A6F9 /* adaptationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD73FA280409130080A6F9 /* adaptationApp.swift */; };
 		52BD73FD280409130080A6F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD73FC280409130080A6F9 /* ContentView.swift */; };
 		52BD73FF280409140080A6F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BD73FE280409140080A6F9 /* Assets.xcassets */; };
@@ -28,6 +31,9 @@
 		52121E5928057E0F00CAE849 /* WinContentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinContentScene.swift; sourceTree = "<group>"; };
 		52121E5B2805901600CAE849 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		52121E5D2805909800CAE849 /* TwoHorizontalButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoHorizontalButtonsView.swift; sourceTree = "<group>"; };
+		525931162805DEC60028838F /* TitleMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleMenuView.swift; sourceTree = "<group>"; };
+		525931172805DEC60028838F /* PauseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
+		525931182805DEC60028838F /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		52BD73F7280409130080A6F9 /* adaptation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adaptation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BD73FA280409130080A6F9 /* adaptationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adaptationApp.swift; sourceTree = "<group>"; };
 		52BD73FC280409130080A6F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +80,9 @@
 				52BD73FA280409130080A6F9 /* adaptationApp.swift */,
 				52BD73FC280409130080A6F9 /* ContentView.swift */,
 				DBB948972805B86F0036C0FA /* SettingsView.swift */,
+				525931172805DEC60028838F /* PauseView.swift */,
+				525931182805DEC60028838F /* SliderView.swift */,
+				525931162805DEC60028838F /* TitleMenuView.swift */,
 				9E911C172804D27B003AD5FD /* LevelView.swift */,
 				52121E5628057DF800CAE849 /* WinContentView.swift */,
 				52121E5D2805909800CAE849 /* TwoHorizontalButtonsView.swift */,
@@ -172,8 +181,11 @@
 				DBB948982805B86F0036C0FA /* SettingsView.swift in Sources */,
 				52BD73FD280409130080A6F9 /* ContentView.swift in Sources */,
 				52121E5C2805901700CAE849 /* CustomButton.swift in Sources */,
+				525931192805DEC60028838F /* TitleMenuView.swift in Sources */,
 				52BD73FB280409130080A6F9 /* adaptationApp.swift in Sources */,
 				52121E5A28057E0F00CAE849 /* WinContentScene.swift in Sources */,
+				5259311B2805DEC60028838F /* SliderView.swift in Sources */,
+				5259311A2805DEC60028838F /* PauseView.swift in Sources */,
 				52121E5E2805909800CAE849 /* TwoHorizontalButtonsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

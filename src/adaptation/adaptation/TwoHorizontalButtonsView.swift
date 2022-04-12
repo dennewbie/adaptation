@@ -16,16 +16,17 @@ struct TwoHorizontalButtonsView: View {
     let padding: CGFloat
     var firstButtonAction: () -> Void
     var secondButtonAction: () -> Void
+    let systemImages: Bool
     
     var body: some View {
         HStack {
             CustomButton(buttonAction: {
                 firstButtonAction()
-            }, imageName: firstButtonSymbol, buttonHeight: buttonsHeigth, buttonWidth: buttonsWidth, buttonAlignment: .trailing, buttonColor: viewColor)
+            }, imageName: firstButtonSymbol, buttonHeight: buttonsHeigth, buttonWidth: buttonsWidth, buttonAlignment: .trailing, buttonColor: viewColor, systemImage: systemImages)
             
             CustomButton(buttonAction: {
                 secondButtonAction()
-            }, imageName: secondButtonSymbol, buttonHeight: buttonsHeigth, buttonWidth: buttonsWidth, buttonAlignment: .leading, buttonColor: viewColor)
+            }, imageName: secondButtonSymbol, buttonHeight: buttonsHeigth, buttonWidth: buttonsWidth, buttonAlignment: .leading, buttonColor: viewColor, systemImage: systemImages)
         }
         .padding(.all, padding)
     }

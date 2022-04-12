@@ -41,7 +41,7 @@ struct WinContentView: View {
             }, secondButtonAction: {
                 // navigation to the next level view
                 print("play button clicked")
-            })
+            }, systemImages: true)
         }
     }
 }
