@@ -10,6 +10,8 @@
 		52121E5728057DF800CAE849 /* WinContentScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 52121E5528057DF800CAE849 /* WinContentScene.sks */; };
 		52121E5828057DF800CAE849 /* WinContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5628057DF800CAE849 /* WinContentView.swift */; };
 		52121E5A28057E0F00CAE849 /* WinContentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5928057E0F00CAE849 /* WinContentScene.swift */; };
+		52121E5C2805901700CAE849 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5B2805901600CAE849 /* CustomButton.swift */; };
+		52121E5E2805909800CAE849 /* TwoHorizontalButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5D2805909800CAE849 /* TwoHorizontalButtonsView.swift */; };
 		52BD73FB280409130080A6F9 /* adaptationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD73FA280409130080A6F9 /* adaptationApp.swift */; };
 		52BD73FD280409130080A6F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD73FC280409130080A6F9 /* ContentView.swift */; };
 		52BD73FF280409140080A6F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BD73FE280409140080A6F9 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 		52121E5528057DF800CAE849 /* WinContentScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WinContentScene.sks; sourceTree = "<group>"; };
 		52121E5628057DF800CAE849 /* WinContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinContentView.swift; sourceTree = "<group>"; };
 		52121E5928057E0F00CAE849 /* WinContentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinContentScene.swift; sourceTree = "<group>"; };
+		52121E5B2805901600CAE849 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		52121E5D2805909800CAE849 /* TwoHorizontalButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoHorizontalButtonsView.swift; sourceTree = "<group>"; };
 		52BD73F7280409130080A6F9 /* adaptation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adaptation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BD73FA280409130080A6F9 /* adaptationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adaptationApp.swift; sourceTree = "<group>"; };
 		52BD73FC280409130080A6F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				52BD73FC280409130080A6F9 /* ContentView.swift */,
 				9E911C172804D27B003AD5FD /* LevelView.swift */,
 				52121E5628057DF800CAE849 /* WinContentView.swift */,
+				52121E5D2805909800CAE849 /* TwoHorizontalButtonsView.swift */,
+				52121E5B2805901600CAE849 /* CustomButton.swift */,
 				52121E5928057E0F00CAE849 /* WinContentScene.swift */,
 				52121E5528057DF800CAE849 /* WinContentScene.sks */,
 				52BD73FE280409140080A6F9 /* Assets.xcassets */,
@@ -161,8 +167,10 @@
 				9E911C182804D27B003AD5FD /* LevelView.swift in Sources */,
 				52121E5828057DF800CAE849 /* WinContentView.swift in Sources */,
 				52BD73FD280409130080A6F9 /* ContentView.swift in Sources */,
+				52121E5C2805901700CAE849 /* CustomButton.swift in Sources */,
 				52BD73FB280409130080A6F9 /* adaptationApp.swift in Sources */,
 				52121E5A28057E0F00CAE849 /* WinContentScene.swift in Sources */,
+				52121E5E2805909800CAE849 /* TwoHorizontalButtonsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
