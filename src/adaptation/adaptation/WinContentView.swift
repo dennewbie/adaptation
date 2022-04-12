@@ -36,8 +36,10 @@ struct WinContentView: View {
             TopWinView()
             TwoHorizontalButtonsView(viewColor: winViewColor, firstButtonSymbol: homeSymbol, secondButtonSymbol: playSymbol, buttonsWidth: buttonWidth, buttonsHeigth: buttonHeigth, padding: defaultViewBottomPadding,
                 firstButtonAction: {
+                // navigation to home view
                 print("home button clicked")
             }, secondButtonAction: {
+                // navigation to the next level view
                 print("play button clicked")
             })
         }
