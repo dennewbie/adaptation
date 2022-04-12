@@ -35,8 +35,8 @@ class GameScene: SKScene {
         UserInit()
        
         //Cam Create
-        cam.xScale = 0.5
-        cam.yScale = 0.5
+        cam.xScale = 0.7
+        cam.yScale = 0.7
         User.addChild(cam)
         scene?.camera = cam
         
@@ -145,12 +145,14 @@ class GameScene: SKScene {
                 if (i == 1 && j == 1) {
                     Start = SKSpriteNode(imageNamed: "confirmButton")
                     Start.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
+                    Start.size = CGSize(width: 100, height: 100)
                     scene?.addChild(Start)
                 }
                 
                 if(i == m-1 && j == n-1) {
                     End = SKSpriteNode(imageNamed: "confirmButton")
                     End.position  = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
+                    End.size = CGSize(width: 100, height: 100)
                     scene?.addChild(End)
                 }
                 
@@ -158,7 +160,7 @@ class GameScene: SKScene {
                 if (i == 0 || j == 0 || i == m || j == n){
                     floor[i][j] = SKSpriteNode(imageNamed: "Walls")
                     floor[i][j]?.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
-                    floor[i][j]?.size = CGSize(width: 170, height: 170)
+                    floor[i][j]?.size = CGSize(width: 100, height: 100)
                     //wall Physics
                     floor[i][j]?.physicsBody = SKPhysicsBody(rectangleOf: floor[i][j]!.size)
                     floor[i][j]?.physicsBody?.affectedByGravity = false
