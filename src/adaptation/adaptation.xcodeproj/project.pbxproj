@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52121E5728057DF800CAE849 /* WinContentScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 52121E5528057DF800CAE849 /* WinContentScene.sks */; };
+		52121E5828057DF800CAE849 /* WinContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5628057DF800CAE849 /* WinContentView.swift */; };
+		52121E5A28057E0F00CAE849 /* WinContentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5928057E0F00CAE849 /* WinContentScene.swift */; };
 		52BD73FB280409130080A6F9 /* adaptationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD73FA280409130080A6F9 /* adaptationApp.swift */; };
 		52BD73FD280409130080A6F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD73FC280409130080A6F9 /* ContentView.swift */; };
 		52BD73FF280409140080A6F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BD73FE280409140080A6F9 /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52121E5528057DF800CAE849 /* WinContentScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WinContentScene.sks; sourceTree = "<group>"; };
+		52121E5628057DF800CAE849 /* WinContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinContentView.swift; sourceTree = "<group>"; };
+		52121E5928057E0F00CAE849 /* WinContentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinContentScene.swift; sourceTree = "<group>"; };
 		52BD73F7280409130080A6F9 /* adaptation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adaptation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BD73FA280409130080A6F9 /* adaptationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adaptationApp.swift; sourceTree = "<group>"; };
 		52BD73FC280409130080A6F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +68,9 @@
 				52BD73FA280409130080A6F9 /* adaptationApp.swift */,
 				52BD73FC280409130080A6F9 /* ContentView.swift */,
 				9E911C172804D27B003AD5FD /* LevelView.swift */,
+				52121E5628057DF800CAE849 /* WinContentView.swift */,
+				52121E5928057E0F00CAE849 /* WinContentScene.swift */,
+				52121E5528057DF800CAE849 /* WinContentScene.sks */,
 				52BD73FE280409140080A6F9 /* Assets.xcassets */,
 				52BD7400280409140080A6F9 /* Preview Content */,
 			);
@@ -135,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52BD7402280409140080A6F9 /* Preview Assets.xcassets in Resources */,
+				52121E5728057DF800CAE849 /* WinContentScene.sks in Resources */,
 				82E5E50B2804641E00E823FF /* GameScene.sks in Resources */,
 				52BD73FF280409140080A6F9 /* Assets.xcassets in Resources */,
 			);
@@ -149,8 +159,10 @@
 			files = (
 				82E5E50C2804641E00E823FF /* GameScene.swift in Sources */,
 				9E911C182804D27B003AD5FD /* LevelView.swift in Sources */,
+				52121E5828057DF800CAE849 /* WinContentView.swift in Sources */,
 				52BD73FD280409130080A6F9 /* ContentView.swift in Sources */,
 				52BD73FB280409130080A6F9 /* adaptationApp.swift in Sources */,
+				52121E5A28057E0F00CAE849 /* WinContentScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
