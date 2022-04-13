@@ -9,6 +9,10 @@ import SwiftUI
 import SpriteKit
 
 struct ContentView: View {
+    init() {
+        UINavigationBar.setAnimationsEnabled(false)
+    }
+    
     var scene: SKScene {
         let scene = SKScene(fileNamed: "GameScene")
         scene!.size = CGSize(width: 820, height: 1770)
@@ -18,8 +22,12 @@ struct ContentView: View {
     
     
     var body: some View {
-        SpriteView(scene: scene)
-            .edgesIgnoringSafeArea(.all)
+        NavigationView {
+            SpriteView(scene: scene)
+                .edgesIgnoringSafeArea(.all)
+        }
+        .navigationBarTitle("Title")
+        .navigationBarHidden(true)
     }
 }
 
