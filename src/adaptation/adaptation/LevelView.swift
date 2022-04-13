@@ -11,9 +11,19 @@ struct LevelView: View {
     @Environment(\.presentationMode) var presentationMode : Binding<PresentationMode>
     var body: some View {
         VStack {
+            HStack{
+                CustomButton(buttonAction: {self.presentationMode.wrappedValue.dismiss()}, imageName: "arrowshape.turn.up.backward.circle", buttonHeight: 51, buttonWidth: 51, buttonAlignment: .leading, buttonColor:UIColor(red: 132 / 255, green: 93 / 255, blue: 250 / 255, alpha: 1.0),systemImage: true)
+                    .padding(.trailing,UIScreen.screenWidth/3.7)
+                    .frame(width: 51, height: 51)
+    
                 Text("Levels")
                     .foregroundColor(Color(red: 37/255, green: 17/255, blue: 97/255 ))
-                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .font(.system(size: 40))
+                    .padding(.trailing,66)
+                
+            }.frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight/10, alignment: .center)
+                
                 HStack {
                     LivelliView(livello: "1")
                     LivelliView(livello: "2")
@@ -52,10 +62,12 @@ struct LivelliView: View {
                 .frame(width: 170, height: 138)
                 .foregroundColor(ColorDark)
                 .cornerRadius(30)
+                .padding(8)
                 
             Text(livello)
                 .foregroundColor(.white)
-            
+                .font(.system(size: 35))
+                .fontWeight(.bold)
         }
         }else {
             ZStack{
@@ -66,7 +78,6 @@ struct LivelliView: View {
                     
                 Text(livello)
                     .foregroundColor(.white)
-                
                 }
             }
         }
