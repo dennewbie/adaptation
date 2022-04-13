@@ -20,7 +20,7 @@ struct CustomButton: View {
         Button(action: {
             self.buttonAction()
         }, label: {
-            if (systemImage == false) {
+            if (!systemImage) {
                 Image(imageName).resizable().frame(width: buttonWidth, height: buttonHeight, alignment: buttonAlignment)
                     .padding(.trailing, 40)
                     .padding(.leading, 40)

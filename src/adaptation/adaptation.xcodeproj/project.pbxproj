@@ -16,16 +16,14 @@
 		5259311A2805DEC60028838F /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931172805DEC60028838F /* PauseView.swift */; };
 		5259311B2805DEC60028838F /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931182805DEC60028838F /* SliderView.swift */; };
 		525D6F5D2806FEA2000FADC5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F5C2806FEA2000FADC5 /* HomeView.swift */; };
+		525D6F6228072002000FADC5 /* SingleLevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F5F28072002000FADC5 /* SingleLevelsView.swift */; };
+		525D6F6328072002000FADC5 /* LevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F6028072002000FADC5 /* LevelsView.swift */; };
 		52BD73FB280409130080A6F9 /* adaptationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD73FA280409130080A6F9 /* adaptationApp.swift */; };
 		52BD73FD280409130080A6F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD73FC280409130080A6F9 /* ContentView.swift */; };
 		52BD73FF280409140080A6F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BD73FE280409140080A6F9 /* Assets.xcassets */; };
 		52BD7402280409140080A6F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BD7401280409140080A6F9 /* Preview Assets.xcassets */; };
-		82AEAB0A2807142F00B25FE6 /* FloorCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AEAB092807142F00B25FE6 /* FloorCreator.swift */; };
-		82AEAB0F2807173900B25FE6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AEAB0E2807173900B25FE6 /* User.swift */; };
-		82AEAB12280727FD00B25FE6 /* Maze_lv1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AEAB11280727FD00B25FE6 /* Maze_lv1.swift */; };
 		82E5E50B2804641E00E823FF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 82E5E5092804641E00E823FF /* GameScene.sks */; };
 		82E5E50C2804641E00E823FF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E5E50A2804641E00E823FF /* GameScene.swift */; };
-		9E911C182804D27B003AD5FD /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E911C172804D27B003AD5FD /* LevelView.swift */; };
 		DBB948982805B86F0036C0FA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB948972805B86F0036C0FA /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,17 +37,15 @@
 		525931172805DEC60028838F /* PauseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
 		525931182805DEC60028838F /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		525D6F5C2806FEA2000FADC5 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		525D6F5F28072002000FADC5 /* SingleLevelsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleLevelsView.swift; sourceTree = "<group>"; };
+		525D6F6028072002000FADC5 /* LevelsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsView.swift; sourceTree = "<group>"; };
 		52BD73F7280409130080A6F9 /* adaptation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adaptation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BD73FA280409130080A6F9 /* adaptationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adaptationApp.swift; sourceTree = "<group>"; };
 		52BD73FC280409130080A6F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52BD73FE280409140080A6F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52BD7401280409140080A6F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		82AEAB092807142F00B25FE6 /* FloorCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorCreator.swift; sourceTree = "<group>"; };
-		82AEAB0E2807173900B25FE6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		82AEAB11280727FD00B25FE6 /* Maze_lv1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maze_lv1.swift; sourceTree = "<group>"; };
 		82E5E5092804641E00E823FF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		82E5E50A2804641E00E823FF /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		9E911C172804D27B003AD5FD /* LevelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
 		DBB948972805B86F0036C0FA /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,15 +79,17 @@
 		52BD73F9280409130080A6F9 /* adaptation */ = {
 			isa = PBXGroup;
 			children = (
-				82AEAB0C280716F000B25FE6 /* Maze */,
+				82E5E5092804641E00E823FF /* GameScene.sks */,
+				82E5E50A2804641E00E823FF /* GameScene.swift */,
 				52BD73FA280409130080A6F9 /* adaptationApp.swift */,
 				52BD73FC280409130080A6F9 /* ContentView.swift */,
 				DBB948972805B86F0036C0FA /* SettingsView.swift */,
 				525931172805DEC60028838F /* PauseView.swift */,
 				525D6F5C2806FEA2000FADC5 /* HomeView.swift */,
+				525D6F6028072002000FADC5 /* LevelsView.swift */,
+				525D6F5F28072002000FADC5 /* SingleLevelsView.swift */,
 				525931182805DEC60028838F /* SliderView.swift */,
 				525931162805DEC60028838F /* TitleMenuView.swift */,
-				9E911C172804D27B003AD5FD /* LevelView.swift */,
 				52121E5628057DF800CAE849 /* WinContentView.swift */,
 				52121E5D2805909800CAE849 /* TwoHorizontalButtonsView.swift */,
 				52121E5B2805901600CAE849 /* CustomButton.swift */,
@@ -109,35 +107,6 @@
 				52BD7401280409140080A6F9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		82AEAB0C280716F000B25FE6 /* Maze */ = {
-			isa = PBXGroup;
-			children = (
-				82AEAB102807254700B25FE6 /* Levels */,
-				82AEAB0D2807170600B25FE6 /* GameScene */,
-				82AEAB092807142F00B25FE6 /* FloorCreator.swift */,
-			);
-			name = Maze;
-			sourceTree = "<group>";
-		};
-		82AEAB0D2807170600B25FE6 /* GameScene */ = {
-			isa = PBXGroup;
-			children = (
-				82E5E50A2804641E00E823FF /* GameScene.swift */,
-				82E5E5092804641E00E823FF /* GameScene.sks */,
-				82AEAB0E2807173900B25FE6 /* User.swift */,
-			);
-			name = GameScene;
-			sourceTree = "<group>";
-		};
-		82AEAB102807254700B25FE6 /* Levels */ = {
-			isa = PBXGroup;
-			children = (
-				82AEAB11280727FD00B25FE6 /* Maze_lv1.swift */,
-			);
-			name = Levels;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,15 +182,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				82E5E50C2804641E00E823FF /* GameScene.swift in Sources */,
-				82AEAB0A2807142F00B25FE6 /* FloorCreator.swift in Sources */,
-				9E911C182804D27B003AD5FD /* LevelView.swift in Sources */,
+				525D6F6328072002000FADC5 /* LevelsView.swift in Sources */,
 				525D6F5D2806FEA2000FADC5 /* HomeView.swift in Sources */,
 				52121E5828057DF800CAE849 /* WinContentView.swift in Sources */,
 				DBB948982805B86F0036C0FA /* SettingsView.swift in Sources */,
 				52BD73FD280409130080A6F9 /* ContentView.swift in Sources */,
+				525D6F6228072002000FADC5 /* SingleLevelsView.swift in Sources */,
 				52121E5C2805901700CAE849 /* CustomButton.swift in Sources */,
-				82AEAB12280727FD00B25FE6 /* Maze_lv1.swift in Sources */,
-				82AEAB0F2807173900B25FE6 /* User.swift in Sources */,
 				525931192805DEC60028838F /* TitleMenuView.swift in Sources */,
 				52BD73FB280409130080A6F9 /* adaptationApp.swift in Sources */,
 				52121E5A28057E0F00CAE849 /* WinContentScene.swift in Sources */,
