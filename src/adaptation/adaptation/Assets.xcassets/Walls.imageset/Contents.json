@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "blackWallMaze@1x.png",
+      "filename" : "istockphoto-1257225535-612x612.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "blackWallMaze@2x.png",
+      "filename" : "istockphoto-1257225535-612x612-1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "blackWallMaze@3x.png",
+      "filename" : "istockphoto-1257225535-612x612-2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

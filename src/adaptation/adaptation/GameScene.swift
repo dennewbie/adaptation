@@ -28,17 +28,17 @@ class GameScene: SKScene {
     
     
     override func didMove(to view: SKView) {
-        creatingmaze(m: 10, n: 20)
+        creatingmaze(m: 14, n: 8)
         scene?.addChild(floors)
         
         //User Init
         UserInit()
        
-        //Cam Create
-        cam.xScale = 0.7
-        cam.yScale = 0.7
-        User.addChild(cam)
-        scene?.camera = cam
+//        //Cam Create
+//        cam.xScale = 0.7
+//        cam.yScale = 0.7
+//        User.addChild(cam)
+//        scene?.camera = cam
         
         let Settings = SKSpriteNode(imageNamed: "Setting")
         Settings.position = CGPoint(x: 325, y: 617)
@@ -136,6 +136,9 @@ class GameScene: SKScene {
     func creatingmaze(m: Int, n: Int) {
         //reset mazew
         floors.removeAllChildren();
+        //Position
+        let xpos = -400
+        let ypos = 700
         //init maze
         var floor = [[SKSpriteNode?]](repeating: [SKSpriteNode?](repeating: nil, count: n+1), count: m+1)
         //for loop init
@@ -144,22 +147,24 @@ class GameScene: SKScene {
                 //Control for start & end
                 if (i == 1 && j == 1) {
                     Start = SKSpriteNode(imageNamed: "confirmButton")
-                    Start.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
+                    Start.position = CGPoint(x: (xpos+(100*j)), y: (ypos-(100*i)))
                     Start.size = CGSize(width: 100, height: 100)
                     scene?.addChild(Start)
                 }
                 
                 if(i == m-1 && j == n-1) {
                     End = SKSpriteNode(imageNamed: "confirmButton")
-                    End.position  = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
+                    End.position  = CGPoint(x: (xpos+(100*j)), y: (ypos-(100*i)))
                     End.size = CGSize(width: 100, height: 100)
                     scene?.addChild(End)
                 }
                 
                 //Control for wall
+                //i = 14 j = 8
+                
                 if (i == 0 || j == 0 || i == m || j == n){
                     floor[i][j] = SKSpriteNode(imageNamed: "Walls")
-                    floor[i][j]?.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
+                    floor[i][j]?.position = CGPoint(x: (xpos+(100*j)), y: (ypos-(100*i)))
                     floor[i][j]?.size = CGSize(width: 100, height: 100)
                     //wall Physics
                     floor[i][j]?.physicsBody = SKPhysicsBody(rectangleOf: floor[i][j]!.size)
@@ -171,8 +176,8 @@ class GameScene: SKScene {
                     //Control for floor placement
                     if (j%2 == 0 && i%2 == 0) {
                         floor[i][j] = SKSpriteNode(imageNamed: "grayTileFloor")
-                        floor[i][j]?.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
-                        floor[i][j]?.size = CGSize(width: 170, height: 170)
+                        floor[i][j]?.position = CGPoint(x: (xpos+(100*j)), y: (ypos-(100*i)))
+                        floor[i][j]?.size = CGSize(width: 100, height: 100)
                         floors.addChild(floor[i][j]!)
                     }
                     else {
@@ -181,8 +186,8 @@ class GameScene: SKScene {
                         }else{
                         floor[i][j] = SKSpriteNode(imageNamed: "whiteTileFloor")
                         }
-                        floor[i][j]?.position = CGPoint(x: (-328-(100*j)), y: (611-(100*i)))
-                        floor[i][j]?.size = CGSize(width: 170, height: 170)
+                        floor[i][j]?.position = CGPoint(x: (xpos+(100*j)), y: (ypos-(100*i)))
+                        floor[i][j]?.size = CGSize(width: 100, height: 100)
                         floors.addChild(floor[i][j]!)
                     }
 

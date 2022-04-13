@@ -11,7 +11,7 @@ import SpriteKit
 struct ContentView: View {
     var scene: SKScene {
         let scene = SKScene(fileNamed: "GameScene")
-        scene!.size = CGSize(width: 750, height: 1334)
+        scene!.size = CGSize(width: 820, height: 1770)
         scene?.scaleMode = .aspectFit
         return scene!
     }
