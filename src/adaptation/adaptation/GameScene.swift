@@ -18,9 +18,11 @@ class GameScene: SKScene {
     var obstacles :[SKSpriteNode] = [SKSpriteNode]()
     
     var mazeSize = CGSize()
-
     var previousTime = TimeInterval()
+    
+    //Create Scene
     var floors = SKNode()
+    var Obst = SKNode()
 // Matrix 10 x 20  Alternate PAtter floor
     
         
@@ -28,8 +30,13 @@ class GameScene: SKScene {
     
     
     override func didMove(to view: SKView) {
+        //create maze
         creatingmaze(m: 14, n: 8)
         scene?.addChild(floors)
+        
+        //init obj
+        ImplementObst(m: 14, n: 8)
+        scene?.addChild(Obst)
         
         //User Init
         UserInit()
@@ -52,8 +59,8 @@ class GameScene: SKScene {
     func UserInit() {
         //User Create
         User = SKSpriteNode(imageNamed: "maleCharacter")
-        User.size.height = 50
-        User.size.width = 50
+        User.size.height = 60
+        User.size.width = 60
         User.position = Start.position
         scene?.addChild(User)
         
@@ -195,6 +202,34 @@ class GameScene: SKScene {
             }
         }
         mazeSize = CGSize(width: 170*m+1, height: 170*m+1)
+    }
+    
+    func ImplementObst(m: Int, n:Int){
+        //creating Matrix for obj
+        var obst = [[SKSpriteNode?]](repeating: [SKSpriteNode?](repeating: nil, count: n+1), count: m+1)
+        //x & y
+        let xpos = -400
+        let ypos = 700
+        //Init for
+        for i in 1..<m{
+            for j in 1..<n{
+                if (Int.random(in: 1...100)>=69){
+                    if (i == 1 && j == 1 || i == m && j == n){
+                        
+                    }else{
+                        obst[i][j] = SKSpriteNode(imageNamed: "obstacleTileFloor")
+                        obst[i][j]?.position = CGPoint(x: (xpos+(100*j)), y: (ypos-(100*i)))
+                        obst[i][j]?.size = CGSize(width: 100, height: 100)
+                        //wall Physics
+                        obst[i][j]?.physicsBody = SKPhysicsBody(rectangleOf: obst[i][j]!.size)
+                        obst[i][j]?.physicsBody?.affectedByGravity = false
+                        obst[i][j]?.physicsBody?.allowsRotation = false
+                        obst[i][j]?.physicsBody?.isDynamic = false
+                        Obst.addChild(obst[i][j]!)
+                    }
+                }
+            }
+        }
     }
 }
 
