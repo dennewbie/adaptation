@@ -169,17 +169,38 @@ class GameScene: SKScene {
                 //Control for wall
                 //i = 14 j = 8
                 
-                if (i == 0 || j == 0 || i == m || j == n){
+                if (i == 0 || i == m){
                     floor[i][j] = SKSpriteNode(imageNamed: "Walls")
-                    floor[i][j]?.position = CGPoint(x: (xpos+(100*j)), y: (ypos-(100*i)))
-                    floor[i][j]?.size = CGSize(width: 100, height: 100)
+                    floor[i][j]?.size = CGSize(width: 100, height: 20)
+                    if (i == 0) {
+                        floor[i][j]?.position = CGPoint(x: (xpos+(100*j)), y: (ypos-40-(100*i)))
+                    } else {
+                        floor[i][j]?.position = CGPoint(x: (xpos+(100*j)), y: (ypos+40-(100*i)))
+                    }
+                    
                     //wall Physics
                     floor[i][j]?.physicsBody = SKPhysicsBody(rectangleOf: floor[i][j]!.size)
                     floor[i][j]?.physicsBody?.affectedByGravity = false
                     floor[i][j]?.physicsBody?.allowsRotation = false
                     floor[i][j]?.physicsBody?.isDynamic = false
                     floors.addChild(floor[i][j]!)
-                }else {
+                }else if ( j == 0 || j == n){
+                    floor[i][j] = SKSpriteNode(imageNamed: "Walls")
+                    floor[i][j]?.size = CGSize(width: 20, height: 100)
+                    if (j==0) {
+                        floor[i][j]?.position = CGPoint(x: (xpos+(100*j)), y: (ypos-(100*i)))
+                    } else {
+                        floor[i][j]?.position = CGPoint(x: (xpos+(100*j)), y: (ypos-(100*i)))
+                    }
+                    
+                    
+                    //wall Physics
+                    floor[i][j]?.physicsBody = SKPhysicsBody(rectangleOf: floor[i][j]!.size)
+                    floor[i][j]?.physicsBody?.affectedByGravity = false
+                    floor[i][j]?.physicsBody?.allowsRotation = false
+                    floor[i][j]?.physicsBody?.isDynamic = false
+                    floors.addChild(floor[i][j]!)
+                } else {
                     //Control for floor placement
                     if (j%2 == 0 && i%2 == 0) {
                         floor[i][j] = SKSpriteNode(imageNamed: "grayTileFloor")
