@@ -11,7 +11,7 @@ import SwiftUI
 struct adaptationApp: App {
     var body: some Scene {
         WindowGroup {
-            LevelsView()
+            ContentView()
         }
     }
 }
