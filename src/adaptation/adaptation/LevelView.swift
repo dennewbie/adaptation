@@ -11,9 +11,9 @@ struct LevelView: View {
     @Environment(\.presentationMode) var presentationMode : Binding<PresentationMode>
     var body: some View {
         VStack {
-
-                Text("Level").foregroundColor(Color(red: 37/255, green: 17/255, blue: 97/255 ))
-                        .font(.largeTitle)
+                Text("Levels")
+                    .foregroundColor(Color(red: 37/255, green: 17/255, blue: 97/255 ))
+                    .font(.largeTitle)
                 HStack {
                     LivelliView(livello: "1")
                     LivelliView(livello: "2")
@@ -22,7 +22,7 @@ struct LevelView: View {
                     LivelliView(livello: "3")
                     LivelliView(livello: "4")
                 }
-        }.position(x: 195, y: 120)
+        }.position(x: 195, y: 190)
             .navigationBarBackButtonHidden(true)
             .toolbar{
                 ToolbarItem(placement: .navigationBarLeading, content: {
