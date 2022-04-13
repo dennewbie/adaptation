@@ -117,11 +117,10 @@
 		82AEAB19280731F600B25FE6 /* Maze */ = {
 			isa = PBXGroup;
 			children = (
+				82AEAB1B2807324A00B25FE6 /* Player */,
 				82AEAB1A2807320B00B25FE6 /* Levels */,
 				82E5E5092804641E00E823FF /* GameScene.sks */,
 				82E5E50A2804641E00E823FF /* GameScene.swift */,
-				82AEAB17280731E600B25FE6 /* User.swift */,
-				82AEAB15280731DD00B25FE6 /* FloorCreator.swift */,
 			);
 			name = Maze;
 			sourceTree = "<group>";
@@ -129,9 +128,18 @@
 		82AEAB1A2807320B00B25FE6 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
+				82AEAB15280731DD00B25FE6 /* FloorCreator.swift */,
 				82AEAB13280731D300B25FE6 /* Maze_lv1.swift */,
 			);
 			name = Levels;
+			sourceTree = "<group>";
+		};
+		82AEAB1B2807324A00B25FE6 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				82AEAB17280731E600B25FE6 /* User.swift */,
+			);
+			name = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
