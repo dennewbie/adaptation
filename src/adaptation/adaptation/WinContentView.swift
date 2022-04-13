@@ -41,7 +41,7 @@ struct WinContentView: View {
             VStack {
                 TopWinView()
                 NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
-                    NavigationLink(destination: LevelView(), tag: 2, selection: $selectedButton) {
+                    NavigationLink(destination: LevelsView(), tag: 2, selection: $selectedButton) {
                         TwoHorizontalButtonsView(viewColor: winViewColor, firstButtonSymbol: homeSymbol, secondButtonSymbol: playSymbol, buttonsWidth: buttonWidth, buttonsHeigth: buttonHeigth, padding: defaultViewBottomPadding,
                         firstButtonAction: {
                             // navigation to home view

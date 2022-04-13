@@ -47,7 +47,7 @@ struct BottomBlock: View {
     
     var body: some View {
         VStack {
-            NavigationLink(destination: LevelView(), tag: 2, selection: $selectedButton) {
+            NavigationLink(destination: LevelsView(), tag: 2, selection: $selectedButton) {
                 CustomButton(buttonAction: {
                     print("play button pressed")
                     self.selectedButton = 2
