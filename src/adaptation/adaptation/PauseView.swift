@@ -14,9 +14,15 @@ struct PauseView: View {
     let buttonWidth: CGFloat = 60
     let buttonHeigth: CGFloat = 60
     let defaultViewBottomPadding: CGFloat = 0
+    @State private var selectedButton: Int? = nil
+    
+    init() {
+        UINavigationBar.setAnimationsEnabled(false)
+    }
     
     var body: some View {
-        ZStack {
+        NavigationView {
+            ZStack {
             Rectangle()
                 .opacity(0.3)
                 .edgesIgnoringSafeArea(.all)
@@ -29,17 +35,26 @@ struct PauseView: View {
                                     SliderView(sliderOptionLabelText: "Sound", firstIconName: "speaker.wave.1", secondIconName: "speaker.wave.3")
                                     SliderView(sliderOptionLabelText: "Music", firstIconName: "music.note", secondIconName: "music.quarternote.3")
                                     
-                                    TwoHorizontalButtonsView(viewColor: pauseViewColor, firstButtonSymbol: homeSymbol, secondButtonSymbol: playSymbol, buttonsWidth: buttonWidth, buttonsHeigth: buttonHeigth, padding: defaultViewBottomPadding, firstButtonAction: {
-                                        print("homeButotnPressed")
-                                    }, secondButtonAction: {
-                                        print("playButtonPressed")
-                                    }, systemImages: true)
-                                    .padding(.top, 25)
+                                    NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
+                                        NavigationLink(destination: ContentView(), tag: 2, selection: $selectedButton) {
+                                            TwoHorizontalButtonsView(viewColor: pauseViewColor, firstButtonSymbol: homeSymbol, secondButtonSymbol: playSymbol, buttonsWidth: buttonWidth, buttonsHeigth: buttonHeigth, padding: defaultViewBottomPadding, firstButtonAction: {
+                                                print("homeButotnPressed")
+                                                self.selectedButton = 1
+                                            }, secondButtonAction: {
+                                                print("playButtonPressed")
+                                                self.selectedButton = 2
+                                            }, systemImages: true)
+                                            .padding(.top, 25)
+                                    }
+                                }
                                 }
                             )
                     }
                 )
+            }
         }
+        .navigationBarTitle("Title")
+        .navigationBarHidden(true)
     }
 }
 
