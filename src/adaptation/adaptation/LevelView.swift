@@ -26,7 +26,7 @@ struct LevelView: View {
             .navigationBarBackButtonHidden(true)
             .toolbar{
                 ToolbarItem(placement: .navigationBarLeading, content: {
-                    CustomButton(buttonAction: {self.presentationMode.wrappedValue.dismiss()}, imageName: "arrowshape.turn.up.backward.circle", buttonHeight: 41, buttonWidth: 41, buttonAlignment: .bottom, buttonColor:UIColor(red: 132 / 255, green: 93 / 255, blue: 250 / 255, alpha: 1.0))
+                    CustomButton(buttonAction: {self.presentationMode.wrappedValue.dismiss()}, imageName: "arrowshape.turn.up.backward.circle", buttonHeight: 41, buttonWidth: 41, buttonAlignment: .bottom, buttonColor:UIColor(red: 132 / 255, green: 93 / 255, blue: 250 / 255, alpha: 1.0),systemImage: true)
                 })
             }
             }
