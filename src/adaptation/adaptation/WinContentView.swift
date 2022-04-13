@@ -30,19 +30,34 @@ struct WinContentView: View {
     let buttonWidth: CGFloat = 80
     let buttonHeigth: CGFloat = 80
     let defaultViewBottomPadding: CGFloat = 30
+    @State private var selectedButton: Int? = nil
+    
+    init() {
+        UINavigationBar.setAnimationsEnabled(false)
+    }
     
     var body: some View {
-        VStack {
-            TopWinView()
-            TwoHorizontalButtonsView(viewColor: winViewColor, firstButtonSymbol: homeSymbol, secondButtonSymbol: playSymbol, buttonsWidth: buttonWidth, buttonsHeigth: buttonHeigth, padding: defaultViewBottomPadding,
-                firstButtonAction: {
-                // navigation to home view
-                print("home button clicked")
-            }, secondButtonAction: {
-                // navigation to the next level view
-                print("play button clicked")
-            }, systemImages: true)
+        NavigationView {
+            VStack {
+                TopWinView()
+                NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
+                    NavigationLink(destination: LevelView(), tag: 2, selection: $selectedButton) {
+                        TwoHorizontalButtonsView(viewColor: winViewColor, firstButtonSymbol: homeSymbol, secondButtonSymbol: playSymbol, buttonsWidth: buttonWidth, buttonsHeigth: buttonHeigth, padding: defaultViewBottomPadding,
+                        firstButtonAction: {
+                            // navigation to home view
+                            print("home button clicked")
+                            self.selectedButton = 1
+                        }, secondButtonAction: {
+                            // navigation to the next level view
+                            print("play button clicked")
+                            self.selectedButton = 2
+                        }, systemImages: true)
+                    }
+                }
+            }
         }
+        .navigationBarTitle("Title")
+        .navigationBarHidden(true)
     }
 }
 
