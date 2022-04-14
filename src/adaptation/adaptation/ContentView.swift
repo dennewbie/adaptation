@@ -7,6 +7,20 @@
 
 import SwiftUI
 import SpriteKit
+import AVFoundation
+
+var audioPlayer: AVAudioPlayer?
+
+func playSound(sound: String, type: String) {
+    if let path = Bundle.main.path(forResource: sound, ofType: type) {
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+            audioPlayer?.play()
+        } catch {
+            print("ERROR")
+        }
+    }
+}
 
 struct ContentView: View {
     init() {
@@ -32,6 +46,11 @@ struct ContentView: View {
             
             LabelView()
         }
+        .onAppear(perform: {
+                playSound(sound: "musicGame", type: "wav")
+                audioPlayer?.numberOfLoops = 100
+                audioPlayer?.volume = 0.5
+        })
     }
 }
 
@@ -53,10 +72,5 @@ struct LabelView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
 
 

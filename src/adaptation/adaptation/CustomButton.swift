@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct CustomButton: View {
     var buttonAction: () -> Void
@@ -18,6 +19,7 @@ struct CustomButton: View {
     
     var body: some View {
         Button(action: {
+            playSound()
             self.buttonAction()
         }, label: {
             if (!systemImage) {
@@ -32,5 +34,14 @@ struct CustomButton: View {
                     .foregroundColor(Color(uiColor: buttonColor))
             }
         })
+    }
+    
+    func playSound() {
+        var filePath: String?
+        filePath = Bundle.main.path(forResource: "buttonSound", ofType: "wav")// For you should be siren and mp3
+        let fileURL = URL(fileURLWithPath: filePath!)
+        var soundID:SystemSoundID = 0
+        AudioServicesCreateSystemSoundID(fileURL as CFURL, &soundID)
+        AudioServicesPlaySystemSound(soundID)
     }
 }

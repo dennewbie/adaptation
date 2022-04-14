@@ -62,9 +62,3 @@ struct PauseView: View {
     }
 }
 
-struct PauseView_Previews: PreviewProvider {
-    static var previews: some View {
-        PauseView()
-    }
-}
-

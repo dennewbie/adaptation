@@ -56,9 +56,3 @@ struct InfoView: View {
         .navigationBarHidden(true)
     }
 }
-
-struct InfoView_Previews: PreviewProvider {
-    static var previews: some View {
-        InfoView()
-    }
-}
