@@ -11,16 +11,35 @@ import SpriteKit
 class MazeLV1 : Maze{
     private var Obst = SKNode()
     private var obst: [[SKSpriteNode?]]
+    private var Start = SKSpriteNode()
+    private var End = SKSpriteNode()
+    private var StartPox: CGPoint
+    private var EndPox: CGPoint
     
     override init(m: Int, n: Int, scene: SKScene){
-        self.obst = [[nil,nil,nil,SKSpriteNode(),nil,nil,nil,nil,nil],
-                         [nil,nil,nil,SKSpriteNode(),nil,SKSpriteNode(),SKSpriteNode(),nil,nil]]
+        self.obst = [[nil,nil,nil,nil,nil,nil,nil,nil,nil], //Wall
+                     [nil,nil,nil,SKSpriteNode(),nil,SKSpriteNode(),SKSpriteNode(),Start,nil],
+                     [nil,nil,SKSpriteNode(),SKSpriteNode(),nil,SKSpriteNode(),SKSpriteNode(),nil,nil],
+                     [nil,nil,nil,nil,nil,SKSpriteNode(),SKSpriteNode(),nil,nil],
+                     [nil,SKSpriteNode(),SKSpriteNode(),SKSpriteNode(),nil,nil,nil,nil,nil],
+                     [nil,SKSpriteNode(),nil,nil,nil,nil,SKSpriteNode(),SKSpriteNode(),nil],
+                     [nil,nil,nil,SKSpriteNode(),nil,nil,SKSpriteNode(),End,nil],
+                     [nil,nil,SKSpriteNode(),SKSpriteNode(),SKSpriteNode(),nil,SKSpriteNode(),nil,nil],
+                     [nil,nil,nil,SKSpriteNode(),nil,nil,SKSpriteNode(),nil,nil],
+                     [nil,SKSpriteNode(),nil,SKSpriteNode(),nil,nil,SKSpriteNode(),nil,nil],
+                     [nil,nil,nil,SKSpriteNode(),nil,SKSpriteNode(),SKSpriteNode(),nil,nil],
+                     [nil,nil,nil,nil,nil,nil,nil,nil,nil],
+                     [nil,SKSpriteNode(),nil,SKSpriteNode(),SKSpriteNode(),nil,SKSpriteNode(),SKSpriteNode(),nil],
+                     [nil,SKSpriteNode(),nil,nil,SKSpriteNode(),nil,nil,SKSpriteNode(),nil]
+        ]
+        StartPox = CGPoint()
+        EndPox = CGPoint()
         //
         super.init(m: m, n: n, scene: scene)
         //Init Obj Matrix
         for i in 1..<m{
             for j in 1..<n{
-                if (obst[i][j] != nil){
+                if (obst[i][j] != nil && obst[i][j] != Start  && obst[i][j] != End){
                     obst[i][j] = SKSpriteNode(imageNamed: "obstacleTileFloor")
                     obst[i][j]?.position = CGPoint(x: (super.xpos+(100*j)), y: (super.ypos-(100*i)))
                     obst[i][j]?.size = CGSize(width: 100, height: 100)
@@ -30,12 +49,44 @@ class MazeLV1 : Maze{
                     obst[i][j]?.physicsBody?.allowsRotation = false
                     obst[i][j]?.physicsBody?.isDynamic = false
                     Obst.addChild(obst[i][j]!)
+                } else{
+                    if (obst[i][j] == Start){
+                        Start = SKSpriteNode(imageNamed: "Start")
+                        Start.size = CGSize(width: 100, height: 100)
+                        Start.position = CGPoint(x: (super.xpos+(100*j)), y: (super.ypos-(100*i)))
+                        StartPox = CGPoint(x: (super.xpos+(100*j)), y: (super.ypos-(100*i)))
+                        //wall Physic
+                        Start.physicsBody = SKPhysicsBody(rectangleOf: Start.size)
+                        Start.physicsBody?.affectedByGravity = false
+                        Start.physicsBody?.allowsRotation = false
+                        Start.physicsBody?.isDynamic = false
+                        Obst.addChild(Start)
+                    } else if(obst[i][j] == End) {
+                        End = SKSpriteNode(imageNamed: "End")
+                        EndPox = CGPoint(x: (super.xpos+(100*j)), y: (super.ypos-(100*i)))
+                        End.size = CGSize(width: 100, height: 100)
+                        End.position = CGPoint(x: (super.xpos+(100*j)), y: (super.ypos-(100*i)))
+                            //
+                            //wall Physic
+                        End.physicsBody = SKPhysicsBody(rectangleOf: End.size)
+                        End.physicsBody?.affectedByGravity = false
+                        End.physicsBody?.allowsRotation = false
+                        End.physicsBody?.isDynamic = false
+                        Obst.addChild(End)
+                    }
                 }
             }
         }
         scene.addChild(Obst)
-        //create floor
-        
-        //Create Obst
     }
+    
+    public func getStartPox() -> CGPoint {
+        return StartPox
+    }
+    
+    
+    public func getEndPox() -> CGPoint {
+        return EndPox
+    }
+ 
 }

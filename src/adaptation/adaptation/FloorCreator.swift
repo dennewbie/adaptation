@@ -9,8 +9,6 @@ import Foundation
 import SpriteKit
 
 class Maze{
-    private var Start = SKSpriteNode(imageNamed: "confirmButton")
-    private var End = SKSpriteNode(imageNamed: "confirmButton")
     private var floors = SKNode()
     internal let xpos = -400
     internal let ypos = 700
@@ -25,19 +23,7 @@ class Maze{
         //for loop init
         for i in 0..<m+1 {
             for j in 0..<n+1 {
-                //Control for start & end
-                if (i == 1 && j == 1) {
-                    self.Start.position = CGPoint(x: (xpos+(100*j)), y: (ypos-(100*i)))
-                    self.Start.size = CGSize(width: 100, height: 100)
-                    scene.addChild(Start)
-                }
-                
-                if(i == m-1 && j == n-1) {
-                    self.End.position  = CGPoint(x: (xpos+(100*j)), y: (ypos-(100*i)))
-                    self.End.size = CGSize(width: 100, height: 100)
-                    scene.addChild(End)
-                }
-                
+
                 //Control for wall
                 //i = 14 j = 8
                 
@@ -97,14 +83,6 @@ class Maze{
         }
         self.mazeSize = CGSize(width: 170*m+1, height: 170*m+1)
         scene.addChild(floors)
-    }
-
-    func getSize()-> CGSize{
-        return mazeSize
-    }
-    
-    func getStart()-> SKSpriteNode{
-        return Start
     }
 }
 

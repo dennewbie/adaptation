@@ -32,7 +32,7 @@ struct User{
         return user
     }
     
-    func setUserpox(start: SKSpriteNode) {
-        user.position = start.position
+    func setUserpox(start: CGPoint) {
+        user.position = start
     }
 }
