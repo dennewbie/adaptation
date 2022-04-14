@@ -18,8 +18,8 @@
 		525C42CD280848D700D434C6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C42CC280848D700D434C6 /* InfoView.swift */; };
 		525C42D42808615500D434C6 /* HomeContentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C42D22808615500D434C6 /* HomeContentScene.swift */; };
 		525C42D52808615500D434C6 /* HomeContentScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 525C42D32808615500D434C6 /* HomeContentScene.sks */; };
-		525C42D8280869FF00D434C6 /* buttonSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 525C42D6280869FF00D434C6 /* buttonSound.wav */; };
-		525C42D9280869FF00D434C6 /* musicGame.wav in Resources */ = {isa = PBXBuildFile; fileRef = 525C42D7280869FF00D434C6 /* musicGame.wav */; };
+		525C42DC28086AC500D434C6 /* buttonSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 525C42DA28086AC500D434C6 /* buttonSound.wav */; };
+		525C42DD28086AC500D434C6 /* musicGame.wav in Resources */ = {isa = PBXBuildFile; fileRef = 525C42DB28086AC500D434C6 /* musicGame.wav */; };
 		525D6F5D2806FEA2000FADC5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F5C2806FEA2000FADC5 /* HomeView.swift */; };
 		525D6F6228072002000FADC5 /* SingleLevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F5F28072002000FADC5 /* SingleLevelsView.swift */; };
 		525D6F6328072002000FADC5 /* LevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F6028072002000FADC5 /* LevelsView.swift */; };
@@ -47,8 +47,8 @@
 		525C42CC280848D700D434C6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		525C42D22808615500D434C6 /* HomeContentScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeContentScene.swift; sourceTree = "<group>"; };
 		525C42D32808615500D434C6 /* HomeContentScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HomeContentScene.sks; sourceTree = "<group>"; };
-		525C42D6280869FF00D434C6 /* buttonSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = buttonSound.wav; path = ../../../../../Downloads/buttonSound.wav; sourceTree = "<group>"; };
-		525C42D7280869FF00D434C6 /* musicGame.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = musicGame.wav; path = ../../../../../Downloads/musicGame.wav; sourceTree = "<group>"; };
+		525C42DA28086AC500D434C6 /* buttonSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buttonSound.wav; sourceTree = "<group>"; };
+		525C42DB28086AC500D434C6 /* musicGame.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = musicGame.wav; sourceTree = "<group>"; };
 		525D6F5C2806FEA2000FADC5 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		525D6F5F28072002000FADC5 /* SingleLevelsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleLevelsView.swift; sourceTree = "<group>"; };
 		525D6F6028072002000FADC5 /* LevelsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsView.swift; sourceTree = "<group>"; };
@@ -106,13 +106,13 @@
 				525D6F6028072002000FADC5 /* LevelsView.swift */,
 				525D6F5F28072002000FADC5 /* SingleLevelsView.swift */,
 				525931182805DEC60028838F /* SliderView.swift */,
+				525C42DA28086AC500D434C6 /* buttonSound.wav */,
+				525C42DB28086AC500D434C6 /* musicGame.wav */,
 				525931162805DEC60028838F /* TitleMenuView.swift */,
 				52121E5628057DF800CAE849 /* WinContentView.swift */,
 				52121E5D2805909800CAE849 /* TwoHorizontalButtonsView.swift */,
 				52121E5B2805901600CAE849 /* CustomButton.swift */,
 				52121E5928057E0F00CAE849 /* WinContentScene.swift */,
-				525C42D6280869FF00D434C6 /* buttonSound.wav */,
-				525C42D7280869FF00D434C6 /* musicGame.wav */,
 				525C42D32808615500D434C6 /* HomeContentScene.sks */,
 				52121E5528057DF800CAE849 /* WinContentScene.sks */,
 				52BD73FE280409140080A6F9 /* Assets.xcassets */,
@@ -215,13 +215,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				525C42D8280869FF00D434C6 /* buttonSound.wav in Resources */,
 				52BD7402280409140080A6F9 /* Preview Assets.xcassets in Resources */,
 				52121E5728057DF800CAE849 /* WinContentScene.sks in Resources */,
 				525C42D52808615500D434C6 /* HomeContentScene.sks in Resources */,
 				82E5E50B2804641E00E823FF /* GameScene.sks in Resources */,
+				525C42DC28086AC500D434C6 /* buttonSound.wav in Resources */,
 				52BD73FF280409140080A6F9 /* Assets.xcassets in Resources */,
-				525C42D9280869FF00D434C6 /* musicGame.wav in Resources */,
+				525C42DD28086AC500D434C6 /* musicGame.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
