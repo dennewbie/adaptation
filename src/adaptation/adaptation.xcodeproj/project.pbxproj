@@ -15,6 +15,7 @@
 		525931192805DEC60028838F /* TitleMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931162805DEC60028838F /* TitleMenuView.swift */; };
 		5259311A2805DEC60028838F /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931172805DEC60028838F /* PauseView.swift */; };
 		5259311B2805DEC60028838F /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931182805DEC60028838F /* SliderView.swift */; };
+		525C42CD280848D700D434C6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C42CC280848D700D434C6 /* InfoView.swift */; };
 		525D6F5D2806FEA2000FADC5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F5C2806FEA2000FADC5 /* HomeView.swift */; };
 		525D6F6228072002000FADC5 /* SingleLevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F5F28072002000FADC5 /* SingleLevelsView.swift */; };
 		525D6F6328072002000FADC5 /* LevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F6028072002000FADC5 /* LevelsView.swift */; };
@@ -39,6 +40,7 @@
 		525931162805DEC60028838F /* TitleMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleMenuView.swift; sourceTree = "<group>"; };
 		525931172805DEC60028838F /* PauseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
 		525931182805DEC60028838F /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		525C42CC280848D700D434C6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		525D6F5C2806FEA2000FADC5 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		525D6F5F28072002000FADC5 /* SingleLevelsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleLevelsView.swift; sourceTree = "<group>"; };
 		525D6F6028072002000FADC5 /* LevelsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				DBB948972805B86F0036C0FA /* SettingsView.swift */,
 				525931172805DEC60028838F /* PauseView.swift */,
 				525D6F5C2806FEA2000FADC5 /* HomeView.swift */,
+				525C42CC280848D700D434C6 /* InfoView.swift */,
 				525D6F6028072002000FADC5 /* LevelsView.swift */,
 				525D6F5F28072002000FADC5 /* SingleLevelsView.swift */,
 				525931182805DEC60028838F /* SliderView.swift */,
@@ -230,6 +233,7 @@
 				5259311B2805DEC60028838F /* SliderView.swift in Sources */,
 				5259311A2805DEC60028838F /* PauseView.swift in Sources */,
 				52121E5E2805909800CAE849 /* TwoHorizontalButtonsView.swift in Sources */,
+				525C42CD280848D700D434C6 /* InfoView.swift in Sources */,
 				82AEAB16280731DD00B25FE6 /* FloorCreator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,7 +363,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"adaptation/Preview Content\"";
-				DEVELOPMENT_TEAM = 563WBB4AAY;
+				DEVELOPMENT_TEAM = 55G4G6ZG7W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -372,7 +376,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.parthenope.adaptation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.parthenope.adaptationdenny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -388,7 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"adaptation/Preview Content\"";
-				DEVELOPMENT_TEAM = 563WBB4AAY;
+				DEVELOPMENT_TEAM = 55G4G6ZG7W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -401,7 +405,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.parthenope.adaptation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.parthenope.adaptationdenny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

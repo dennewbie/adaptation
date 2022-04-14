@@ -10,18 +10,33 @@ import SwiftUI
 struct TopBlock: View {
     let homeViewColorPlayButton: UIColor = UIColor( red: 132 / 255, green: 93 / 255, blue: 250 / 255, alpha: 1.0)
     let homeViewColorSettingsButton: UIColor = UIColor( red: 37 / 255, green: 17 / 255, blue: 97 / 255, alpha: 1.0)
+    let settingsSymbol: String = "gearshape.fill"
+    let infoSymbol: String = "info.circle"
+    let buttonWidth: CGFloat = 100
+    let buttonHeigth: CGFloat = 100
     @State private var selectedButton: Int? = nil
     
     var body: some View {
         VStack{
-            NavigationLink(destination: SettingsView(), tag: 1, selection: $selectedButton) {
-                CustomButton(buttonAction: {
-                    print("settings button pressed")
-                    self.selectedButton = 1
-                }, imageName: "gearshape.fill", buttonHeight: 100, buttonWidth: 100, buttonAlignment: .trailing, buttonColor: homeViewColorSettingsButton, systemImage: true)
-                .padding(.leading, UIScreen.screenWidth / 1.5)
-                .padding(.top, 60)
+            HStack {
+                NavigationLink(destination: InfoView(), tag: 3, selection: $selectedButton) {
+                    CustomButton(buttonAction: {
+                        print("info button pressed")
+                        self.selectedButton = 3
+                    }, imageName: "info.circle", buttonHeight: 100, buttonWidth: 100, buttonAlignment: .center, buttonColor: homeViewColorSettingsButton, systemImage: true)
+                    .padding(.all, UIScreen.screenWidth / 12)
+                    }
+
+                NavigationLink(destination: SettingsView(), tag: 1, selection: $selectedButton) {
+                    CustomButton(buttonAction: {
+                        print("settings button pressed")
+                        self.selectedButton = 1
+                    }, imageName: "gearshape.fill", buttonHeight: 100, buttonWidth: 100, buttonAlignment: .trailing, buttonColor: homeViewColorSettingsButton, systemImage: true)
+                    .padding(.all, UIScreen.screenWidth / 12)
+                    }
             }
+            .frame(width: UIScreen.screenWidth, height: 100, alignment: .center)
+            .padding(.top, 60)
         }
         .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight / 3, alignment: .top)
     }

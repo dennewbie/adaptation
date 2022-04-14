@@ -23,7 +23,7 @@ struct LevelsView: View {
                             CustomButton(buttonAction: {
                                 print("Back Button clicked")
                                 self.selectedButton = 1
-                            }, imageName: "arrowshape.turn.up.backward.circle", buttonHeight: 51, buttonWidth: 51, buttonAlignment: .topLeading, buttonColor: UIColor(red: 132 / 255, green: 93 / 255, blue: 250 / 255, alpha: 1.0), systemImage: true)
+                            }, imageName: "arrowshape.turn.up.backward.circle", buttonHeight: 65, buttonWidth: 65, buttonAlignment: .topLeading, buttonColor: UIColor(red: 132 / 255, green: 93 / 255, blue: 250 / 255, alpha: 1.0), systemImage: true)
                         }
                     }
 
