@@ -17,8 +17,8 @@ struct SettingsViewContent: View {
     var body: some View {
         VStack {
             TitleMenuView(titleLabelText: "Settings")
-            SliderView(sliderOptionLabelText: "Sound", firstIconName: "speaker.wave.1", secondIconName: "speaker.wave.3")
-            SliderView(sliderOptionLabelText: "Music", firstIconName: "music.note", secondIconName: "music.quarternote.3")
+            SliderView(sliderOptionLabelText: "Music", firstIconName: "speaker.wave.1", secondIconName: "speaker.wave.3")
+            SwitchView(switchName: "Sound")
             
             NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
                 CustomButton(buttonAction: {

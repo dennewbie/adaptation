@@ -45,6 +45,7 @@ struct ContentView: View {
                         CustomButton(buttonAction: {
                             print("pause button clicked")
                             self.selectedButton = 2
+                            audioPlayer?.stop()
                         }, imageName: "pause.circle", buttonHeight: 60, buttonWidth: 60, buttonAlignment: .topTrailing, buttonColor: contentViewColor, systemImage: true)
                     }
                 }

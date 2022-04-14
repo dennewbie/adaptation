@@ -33,6 +33,7 @@
 		82E5E50B2804641E00E823FF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 82E5E5092804641E00E823FF /* GameScene.sks */; };
 		82E5E50C2804641E00E823FF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E5E50A2804641E00E823FF /* GameScene.swift */; };
 		DBB948982805B86F0036C0FA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB948972805B86F0036C0FA /* SettingsView.swift */; };
+		F44F2155280880700091A8FF /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F2154280880700091A8FF /* SwitchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		82E5E5092804641E00E823FF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		82E5E50A2804641E00E823FF /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		DBB948972805B86F0036C0FA /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F44F2154280880700091A8FF /* SwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				525931162805DEC60028838F /* TitleMenuView.swift */,
 				52121E5628057DF800CAE849 /* WinContentView.swift */,
 				52121E5D2805909800CAE849 /* TwoHorizontalButtonsView.swift */,
+				F44F2154280880700091A8FF /* SwitchView.swift */,
 				52121E5B2805901600CAE849 /* CustomButton.swift */,
 				52121E5928057E0F00CAE849 /* WinContentScene.swift */,
 				525C42D32808615500D434C6 /* HomeContentScene.sks */,
@@ -240,6 +243,7 @@
 				52121E5828057DF800CAE849 /* WinContentView.swift in Sources */,
 				DBB948982805B86F0036C0FA /* SettingsView.swift in Sources */,
 				52BD73FD280409130080A6F9 /* ContentView.swift in Sources */,
+				F44F2155280880700091A8FF /* SwitchView.swift in Sources */,
 				82AEAB18280731E600B25FE6 /* User.swift in Sources */,
 				525D6F6228072002000FADC5 /* SingleLevelsView.swift in Sources */,
 				52121E5C2805901700CAE849 /* CustomButton.swift in Sources */,

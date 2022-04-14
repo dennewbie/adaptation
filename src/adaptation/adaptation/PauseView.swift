@@ -19,8 +19,8 @@ struct PauseViewContent: View {
     var body: some View {
         VStack {
             TitleMenuView(titleLabelText: "Pause")
-            SliderView(sliderOptionLabelText: "Sound", firstIconName: "speaker.wave.1", secondIconName: "speaker.wave.3")
-            SliderView(sliderOptionLabelText: "Music", firstIconName: "music.note", secondIconName: "music.quarternote.3")
+            SliderView(sliderOptionLabelText: "Music", firstIconName: "speaker.wave.1", secondIconName: "speaker.wave.3")
+            SwitchView(switchName: "Sound")
             
             NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
                 NavigationLink(destination: ContentView(), tag: 2, selection: $selectedButton) {
