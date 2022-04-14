@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct adaptationApp: App {
+    init() {
+        UserDefaults.standard.set(false, forKey: "didLaunchBefore")
+    }
+    
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            ContentView()
         }
     }
 }
