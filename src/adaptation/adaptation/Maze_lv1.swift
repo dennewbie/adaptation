@@ -44,10 +44,11 @@ class MazeLV1 : Maze{
                     obst[i][j]?.position = CGPoint(x: (super.xpos+(100*j)), y: (super.ypos-(100*i)))
                     obst[i][j]?.size = CGSize(width: 100, height: 100)
                     //wall Physic
-                    obst[i][j]?.physicsBody = SKPhysicsBody(rectangleOf: obst[i][j]!.size)
+                    obst[i][j]?.physicsBody = SKPhysicsBody(texture:  (obst[i][j]?.texture)!, size:  obst[i][j]!.size)
                     obst[i][j]?.physicsBody?.affectedByGravity = false
                     obst[i][j]?.physicsBody?.allowsRotation = false
                     obst[i][j]?.physicsBody?.isDynamic = false
+                    obst[i][j]?.physicsBody?.restitution = 0.0
                      
                     Obst.addChild(obst[i][j]!)
                 } else{

@@ -22,7 +22,7 @@ struct User{
     scene.addChild(user)
     
     //User Physics
-    user.physicsBody = SKPhysicsBody(rectangleOf: user.size)
+    user.physicsBody = SKPhysicsBody(texture: user.texture!, size: user.size)
     user.physicsBody?.affectedByGravity = false
     user.physicsBody?.collisionBitMask = 2
     user.physicsBody?.allowsRotation = false
