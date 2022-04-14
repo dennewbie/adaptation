@@ -16,6 +16,8 @@
 		5259311A2805DEC60028838F /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931172805DEC60028838F /* PauseView.swift */; };
 		5259311B2805DEC60028838F /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931182805DEC60028838F /* SliderView.swift */; };
 		525C42CD280848D700D434C6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C42CC280848D700D434C6 /* InfoView.swift */; };
+		525C42D42808615500D434C6 /* HomeContentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C42D22808615500D434C6 /* HomeContentScene.swift */; };
+		525C42D52808615500D434C6 /* HomeContentScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 525C42D32808615500D434C6 /* HomeContentScene.sks */; };
 		525D6F5D2806FEA2000FADC5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F5C2806FEA2000FADC5 /* HomeView.swift */; };
 		525D6F6228072002000FADC5 /* SingleLevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F5F28072002000FADC5 /* SingleLevelsView.swift */; };
 		525D6F6328072002000FADC5 /* LevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F6028072002000FADC5 /* LevelsView.swift */; };
@@ -41,6 +43,8 @@
 		525931172805DEC60028838F /* PauseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
 		525931182805DEC60028838F /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		525C42CC280848D700D434C6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		525C42D22808615500D434C6 /* HomeContentScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeContentScene.swift; sourceTree = "<group>"; };
+		525C42D32808615500D434C6 /* HomeContentScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HomeContentScene.sks; sourceTree = "<group>"; };
 		525D6F5C2806FEA2000FADC5 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		525D6F5F28072002000FADC5 /* SingleLevelsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleLevelsView.swift; sourceTree = "<group>"; };
 		525D6F6028072002000FADC5 /* LevelsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsView.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				82AEAB19280731F600B25FE6 /* Maze */,
 				52BD73FA280409130080A6F9 /* adaptationApp.swift */,
 				52BD73FC280409130080A6F9 /* ContentView.swift */,
+				525C42D32808615500D434C6 /* HomeContentScene.sks */,
+				525C42D22808615500D434C6 /* HomeContentScene.swift */,
 				DBB948972805B86F0036C0FA /* SettingsView.swift */,
 				525931172805DEC60028838F /* PauseView.swift */,
 				525D6F5C2806FEA2000FADC5 /* HomeView.swift */,
@@ -205,6 +211,7 @@
 			files = (
 				52BD7402280409140080A6F9 /* Preview Assets.xcassets in Resources */,
 				52121E5728057DF800CAE849 /* WinContentScene.sks in Resources */,
+				525C42D52808615500D434C6 /* HomeContentScene.sks in Resources */,
 				82E5E50B2804641E00E823FF /* GameScene.sks in Resources */,
 				52BD73FF280409140080A6F9 /* Assets.xcassets in Resources */,
 			);
@@ -218,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82E5E50C2804641E00E823FF /* GameScene.swift in Sources */,
+				525C42D42808615500D434C6 /* HomeContentScene.swift in Sources */,
 				525D6F6328072002000FADC5 /* LevelsView.swift in Sources */,
 				82AEAB14280731D300B25FE6 /* Maze_lv1.swift in Sources */,
 				525D6F5D2806FEA2000FADC5 /* HomeView.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct TopBlock: View {
     let homeViewColorPlayButton: UIColor = UIColor( red: 132 / 255, green: 93 / 255, blue: 250 / 255, alpha: 1.0)
@@ -25,15 +26,15 @@ struct TopBlock: View {
                         self.selectedButton = 3
                     }, imageName: "info.circle", buttonHeight: 100, buttonWidth: 100, buttonAlignment: .center, buttonColor: homeViewColorSettingsButton, systemImage: true)
                     .padding(.all, UIScreen.screenWidth / 12)
-                    }
-
+                }
+                
                 NavigationLink(destination: SettingsView(), tag: 1, selection: $selectedButton) {
                     CustomButton(buttonAction: {
                         print("settings button pressed")
                         self.selectedButton = 1
                     }, imageName: "gearshape.fill", buttonHeight: 100, buttonWidth: 100, buttonAlignment: .trailing, buttonColor: homeViewColorSettingsButton, systemImage: true)
                     .padding(.all, UIScreen.screenWidth / 12)
-                    }
+                }
             }
             .frame(width: UIScreen.screenWidth, height: 100, alignment: .center)
             .padding(.top, 60)
@@ -42,16 +43,32 @@ struct TopBlock: View {
     }
 }
 
+struct HomeSpriteView: View {
+    var scene: SKScene {
+        let scene = SKScene(fileNamed: "HomeContentScene")
+        scene!.size = CGSize(width: UIScreen.screenWidth, height: UIScreen.screenHeight / 2)
+        scene?.scaleMode = .aspectFit
+        return scene!
+    }
+
+    var body: some View {
+        SpriteView(scene: scene)
+            .edgesIgnoringSafeArea(.all)
+    }
+}
+
+
 struct CentralBlock: View {
     var body: some View {
         VStack {
-            Image("maleCharacter").resizable().frame(width: UIScreen.screenWidth / 3, height: UIScreen.screenHeight / 3.7, alignment: .center)
-                .aspectRatio(contentMode: .fit)
+            HomeSpriteView()
+                .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight / 2.5, alignment: .center)
             Text("Adaptation")
                 .font(.system(size: 40, weight: .bold, design: .default))
                 .multilineTextAlignment(.center)
+                .padding(.bottom, 20)
         }
-        .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight / 3, alignment: .center)
+        .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight / 3.5, alignment: .center)
     }
 }
 

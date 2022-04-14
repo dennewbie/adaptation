@@ -40,20 +40,22 @@ struct WinContentView: View {
         NavigationView {
             VStack {
                 TopWinView()
-                NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
-                    NavigationLink(destination: LevelsView(), tag: 2, selection: $selectedButton) {
-                        TwoHorizontalButtonsView(viewColor: winViewColor, firstButtonSymbol: homeSymbol, secondButtonSymbol: playSymbol, buttonsWidth: buttonWidth, buttonsHeigth: buttonHeigth, padding: defaultViewBottomPadding,
-                        firstButtonAction: {
-                            // navigation to home view
-                            print("home button clicked")
+                HStack {
+                    NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
+                        CustomButton(buttonAction: {
+                            print("home button pressed")
                             self.selectedButton = 1
-                        }, secondButtonAction: {
-                            // navigation to the next level view
-                            print("play button clicked")
+                        }, imageName: homeSymbol, buttonHeight: 100, buttonWidth: 100, buttonAlignment: .center, buttonColor: winViewColor, systemImage: true)
+                    }
+                    
+                    NavigationLink(destination: SettingsView(), tag: 2, selection: $selectedButton) {
+                        CustomButton(buttonAction: {
+                            print("levels button pressed")
                             self.selectedButton = 2
-                        }, systemImages: true)
+                        }, imageName: playSymbol, buttonHeight: 100, buttonWidth: 100, buttonAlignment: .trailing, buttonColor: winViewColor, systemImage: true)
                     }
                 }
+                .frame(width: UIScreen.screenWidth, height: 100, alignment: .center)
             }
         }
         .navigationBarTitle("Title")
