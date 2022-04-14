@@ -31,7 +31,7 @@ struct ContentView: View {
     
     var scene: SKScene {
         let scene = SKScene(fileNamed: "GameScene")
-        scene!.size = CGSize(width: 820, height: 1570)
+        scene!.size = CGSize(width: 820, height: 1770)
         scene?.scaleMode = .aspectFit
         return scene!
     }
@@ -39,32 +39,21 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                VStack {
-                    NavigationLink(destination: PauseView(), tag: 2, selection: $selectedButton) {
-                        CustomButton(buttonAction: {
-                            print("pause button clicked")
-                            self.selectedButton = 2
-                            audioPlayer?.stop()
-                        }, imageName: "pause.circle", buttonHeight: 60, buttonWidth: 60, buttonAlignment: .topTrailing, buttonColor: contentViewColor, systemImage: true)
-                    }
-                }
-                .frame(width: UIScreen.screenWidth, height: 60, alignment: .topTrailing)
+            ZStack {
+                SpriteView(scene: scene)
+                    .edgesIgnoringSafeArea(.all)
                 
-                
-                VStack {
-                    SpriteView(scene: scene)
-                        .edgesIgnoringSafeArea(.all)
+                NavigationLink(destination: PauseView(), tag: 1, selection: $selectedButton) {
+                    CustomButton(buttonAction: {
+                        print("pause btn")
+                        self.selectedButton = 1
+                    }, imageName: "pause.circle", buttonHeight: 60, buttonWidth: 60, buttonAlignment: .center, buttonColor: contentViewColor, systemImage: true)
+                    .position(x: UIScreen.screenWidth / 2, y: UIScreen.screenHeight - 70)
                 }
-                .edgesIgnoringSafeArea(.all)
-                .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight - 250, alignment: .center)
                 
-                VStack {
-                    LabelView()
-                }
-                .frame(width: UIScreen.screenWidth, height: 50, alignment: .bottom)
-                .padding(.bottom, 20)
             }
+            .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: .center)
+            .edgesIgnoringSafeArea(.all)
             .onAppear(perform: {
                 playSound(sound: "musicGame", type: "wav")
                 audioPlayer?.numberOfLoops = 100
@@ -94,6 +83,3 @@ struct LabelView: View {
         }
     }
 }
-
-
-

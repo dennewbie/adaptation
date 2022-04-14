@@ -17,6 +17,19 @@ class GameScene: SKScene {
     
     
     override func didMove(to view: SKView) {
+        backgroundColor = UIColor(red: 255 / 255, green: 255 / 255, blue: 255 / 255, alpha: 1.0)
+        let instructionLabel = SKLabelNode(fontNamed: "HelveticaNeue-Bold")
+        instructionLabel.text = "Swipe to move the character"
+        instructionLabel.fontSize = 45
+        instructionLabel.fontColor = UIColor(red: 37 / 255, green: 17 / 255, blue: 97 / 255, alpha: 1.0)
+        instructionLabel.position = CGPoint(x: frame.midX, y: frame.maxY - 150)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            instructionLabel.isHidden = true
+        }
+        
+        self.addChild(instructionLabel)
+        
+        
         //create maze
         let floor = MazeLV1(m: 14, n: 8, scene: scene!)
         //User Init
@@ -25,7 +38,6 @@ class GameScene: SKScene {
         //Swipe
         SwipeInit(view: view)
     }
-    
     
 
 //

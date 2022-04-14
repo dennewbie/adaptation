@@ -21,18 +21,27 @@ struct PauseViewContent: View {
             TitleMenuView(titleLabelText: "Pause")
             SliderView(sliderOptionLabelText: "Music", firstIconName: "speaker.wave.1", secondIconName: "speaker.wave.3")
             
-            NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
-                NavigationLink(destination: ContentView(), tag: 2, selection: $selectedButton) {
-                    TwoHorizontalButtonsView(viewColor: pauseViewColor, firstButtonSymbol: homeSymbol, secondButtonSymbol: playSymbol, buttonsWidth: buttonWidth, buttonsHeigth: buttonHeigth, padding: defaultViewBottomPadding, firstButtonAction: {
-                        print("homeButotnPressed")
+            HStack {
+                NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
+                    CustomButton(buttonAction: {
+                        print("home button pressed")
                         self.selectedButton = 1
-                    }, secondButtonAction: {
-                        print("playButtonPressed")
+                    }, imageName: homeSymbol, buttonHeight: buttonHeigth, buttonWidth: buttonWidth, buttonAlignment: .trailing, buttonColor: pauseViewColor, systemImage: true)
+                    .frame(width: UIScreen.screenWidth / 2, height: buttonHeigth, alignment: .center)
+                    .padding(.trailing, -50)
+                }
+                
+                NavigationLink(destination: ContentView(), tag: 2, selection: $selectedButton) {
+                    CustomButton(buttonAction: {
+                        print("content view button pressed")
                         self.selectedButton = 2
-                    }, systemImages: true)
-                    .padding(.top, 25)
+                    }, imageName: playSymbol, buttonHeight: buttonHeigth, buttonWidth: buttonWidth, buttonAlignment: .leading, buttonColor: pauseViewColor, systemImage: true)
+                    .frame(width: UIScreen.screenWidth / 2, height: buttonHeigth, alignment: .center)
+                    .padding(.leading, -50)
                 }
             }
+            .frame(width: UIScreen.screenWidth, height: 100, alignment: .center)
+            .padding(.top, 60)
         }
     }
 }

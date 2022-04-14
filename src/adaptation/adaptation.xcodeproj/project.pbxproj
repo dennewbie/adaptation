@@ -11,7 +11,6 @@
 		52121E5828057DF800CAE849 /* WinContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5628057DF800CAE849 /* WinContentView.swift */; };
 		52121E5A28057E0F00CAE849 /* WinContentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5928057E0F00CAE849 /* WinContentScene.swift */; };
 		52121E5C2805901700CAE849 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5B2805901600CAE849 /* CustomButton.swift */; };
-		52121E5E2805909800CAE849 /* TwoHorizontalButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5D2805909800CAE849 /* TwoHorizontalButtonsView.swift */; };
 		525931192805DEC60028838F /* TitleMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931162805DEC60028838F /* TitleMenuView.swift */; };
 		5259311A2805DEC60028838F /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931172805DEC60028838F /* PauseView.swift */; };
 		5259311B2805DEC60028838F /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931182805DEC60028838F /* SliderView.swift */; };
@@ -41,7 +40,6 @@
 		52121E5628057DF800CAE849 /* WinContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinContentView.swift; sourceTree = "<group>"; };
 		52121E5928057E0F00CAE849 /* WinContentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinContentScene.swift; sourceTree = "<group>"; };
 		52121E5B2805901600CAE849 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		52121E5D2805909800CAE849 /* TwoHorizontalButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoHorizontalButtonsView.swift; sourceTree = "<group>"; };
 		525931162805DEC60028838F /* TitleMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleMenuView.swift; sourceTree = "<group>"; };
 		525931172805DEC60028838F /* PauseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
 		525931182805DEC60028838F /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				525C42DB28086AC500D434C6 /* musicGame.wav */,
 				525931162805DEC60028838F /* TitleMenuView.swift */,
 				52121E5628057DF800CAE849 /* WinContentView.swift */,
-				52121E5D2805909800CAE849 /* TwoHorizontalButtonsView.swift */,
 				F44F2154280880700091A8FF /* SwitchView.swift */,
 				52121E5B2805901600CAE849 /* CustomButton.swift */,
 				52121E5928057E0F00CAE849 /* WinContentScene.swift */,
@@ -252,7 +249,6 @@
 				52121E5A28057E0F00CAE849 /* WinContentScene.swift in Sources */,
 				5259311B2805DEC60028838F /* SliderView.swift in Sources */,
 				5259311A2805DEC60028838F /* PauseView.swift in Sources */,
-				52121E5E2805909800CAE849 /* TwoHorizontalButtonsView.swift in Sources */,
 				525C42CD280848D700D434C6 /* InfoView.swift in Sources */,
 				82AEAB16280731DD00B25FE6 /* FloorCreator.swift in Sources */,
 			);
