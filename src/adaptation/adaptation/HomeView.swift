@@ -94,6 +94,7 @@ struct BottomBlock: View {
 struct HomeView: View {
     init() {
         UINavigationBar.setAnimationsEnabled(false)
+        UserDefaults.standard.set(true, forKey: "isSoundActive")
     }
     
     var body: some View {
