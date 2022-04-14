@@ -23,8 +23,8 @@ struct TopBlock: View {
                     CustomButton(buttonAction: {
                         print("info button pressed")
                         self.selectedButton = 3
-                    }, imageName: "info.circle", buttonHeight: 100, buttonWidth: 100, buttonAlignment: .leading, buttonColor: homeViewColorSettingsButton, systemImage: true)
-                    .padding(.trailing, UIScreen.screenWidth / 10)
+                    }, imageName: "info.circle", buttonHeight: 100, buttonWidth: 100, buttonAlignment: .center, buttonColor: homeViewColorSettingsButton, systemImage: true)
+                    .padding(.all, UIScreen.screenWidth / 12)
                     }
 
                 NavigationLink(destination: SettingsView(), tag: 1, selection: $selectedButton) {
@@ -32,14 +32,11 @@ struct TopBlock: View {
                         print("settings button pressed")
                         self.selectedButton = 1
                     }, imageName: "gearshape.fill", buttonHeight: 100, buttonWidth: 100, buttonAlignment: .trailing, buttonColor: homeViewColorSettingsButton, systemImage: true)
-                    //.padding(.top, 60)
-                    .padding(.leading, UIScreen.screenWidth / 10)
+                    .padding(.all, UIScreen.screenWidth / 12)
                     }
             }
             .frame(width: UIScreen.screenWidth, height: 100, alignment: .center)
-            .padding(.top, 30)
-            .padding(.leading, 20)
-            .padding(.trailing, 20)
+            .padding(.top, 60)
         }
         .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight / 3, alignment: .top)
     }
