@@ -20,7 +20,6 @@ struct PauseViewContent: View {
         VStack {
             TitleMenuView(titleLabelText: "Pause")
             SliderView(sliderOptionLabelText: "Music", firstIconName: "speaker.wave.1", secondIconName: "speaker.wave.3")
-            SwitchView(switchName: "Sound")
             
             NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
                 NavigationLink(destination: ContentView(), tag: 2, selection: $selectedButton) {
@@ -51,7 +50,7 @@ struct PauseView: View {
                     .edgesIgnoringSafeArea(.all)
                     .overlay(
                         VStack {
-                            Image("pauseView").resizable().frame(width: 350, height: 400, alignment: .center)
+                            Image("pauseView").resizable().frame(width: 350, height: 350, alignment: .center)
                                 .overlay(PauseViewContent())
                         }
                     )

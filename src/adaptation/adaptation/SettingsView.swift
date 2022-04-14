@@ -18,7 +18,6 @@ struct SettingsViewContent: View {
         VStack {
             TitleMenuView(titleLabelText: "Settings")
             SliderView(sliderOptionLabelText: "Music", firstIconName: "speaker.wave.1", secondIconName: "speaker.wave.3")
-            SwitchView(switchName: "Sound")
             
             NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
                 CustomButton(buttonAction: {
@@ -44,7 +43,7 @@ struct SettingsView: View {
                     .edgesIgnoringSafeArea(.all)
                     .overlay(
                         VStack {
-                            Image("pauseView").resizable().frame(width: 350, height: 400, alignment: .center)
+                            Image("pauseView").resizable().frame(width: 350, height: 350, alignment: .center)
                                 .overlay(SettingsViewContent())
                         }
                     )
