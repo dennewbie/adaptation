@@ -56,7 +56,7 @@ struct ContentView: View {
                         .edgesIgnoringSafeArea(.all)
                 }
                 .edgesIgnoringSafeArea(.all)
-                .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight - 230, alignment: .center)
+                .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight - 250, alignment: .center)
                 
                 VStack {
                     LabelView()

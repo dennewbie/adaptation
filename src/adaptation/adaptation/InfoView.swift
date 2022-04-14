@@ -17,10 +17,10 @@ struct InfoViewContent: View {
     var body: some View {
         VStack {
             TitleMenuView(titleLabelText: "Credits")
-            Text("Music from: www.site.org")
-                .multilineTextAlignment(.leading)
-            Text("Sound effects: from www.site.org")
-                .multilineTextAlignment(.leading)
+            Text("Music: \"A Sinister Puzzle\",\nfrom PlayOnLoop.com")
+                .multilineTextAlignment(.center)
+            Text("Sound effect: mixkit-arcade\n-mechanical-bling-210.wav")
+                .multilineTextAlignment(.center)
             
             NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
                 CustomButton(buttonAction: {
@@ -46,7 +46,7 @@ struct InfoView: View {
                     .edgesIgnoringSafeArea(.all)
                     .overlay(
                         VStack {
-                            Image("pauseView").resizable().frame(width: 350, height: 250, alignment: .center)
+                            Image("pauseView").resizable().frame(width: 350, height: 300, alignment: .center)
                                 .overlay(InfoViewContent())
                         }
                     )
