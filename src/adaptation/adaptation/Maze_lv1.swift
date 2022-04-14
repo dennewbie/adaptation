@@ -48,6 +48,7 @@ class MazeLV1 : Maze{
                     obst[i][j]?.physicsBody?.affectedByGravity = false
                     obst[i][j]?.physicsBody?.allowsRotation = false
                     obst[i][j]?.physicsBody?.isDynamic = false
+                     
                     Obst.addChild(obst[i][j]!)
                 } else{
                     if (obst[i][j] == Start){
@@ -55,23 +56,12 @@ class MazeLV1 : Maze{
                         Start.size = CGSize(width: 100, height: 100)
                         Start.position = CGPoint(x: (super.xpos+(100*j)), y: (super.ypos-(100*i)))
                         StartPox = CGPoint(x: (super.xpos+(100*j)), y: (super.ypos-(100*i)))
-                        //wall Physic
-                        Start.physicsBody = SKPhysicsBody(rectangleOf: Start.size)
-                        Start.physicsBody?.affectedByGravity = false
-                        Start.physicsBody?.allowsRotation = false
-                        Start.physicsBody?.isDynamic = false
                         Obst.addChild(Start)
                     } else if(obst[i][j] == End) {
                         End = SKSpriteNode(imageNamed: "End")
                         EndPox = CGPoint(x: (super.xpos+(100*j)), y: (super.ypos-(100*i)))
                         End.size = CGSize(width: 100, height: 100)
                         End.position = CGPoint(x: (super.xpos+(100*j)), y: (super.ypos-(100*i)))
-                            //
-                            //wall Physic
-                        End.physicsBody = SKPhysicsBody(rectangleOf: End.size)
-                        End.physicsBody?.affectedByGravity = false
-                        End.physicsBody?.allowsRotation = false
-                        End.physicsBody?.isDynamic = false
                         Obst.addChild(End)
                     }
                 }

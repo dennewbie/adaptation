@@ -20,8 +20,7 @@ class GameScene: SKScene {
         //create maze
         let floor = MazeLV1(m: 14, n: 8, scene: scene!)
         //User Init
-        Player.setUserpox(start: floor.getStartPox())
-        Player.UserInit(scene: scene!)
+        Player.UserInit(scene: scene!, start: floor.getStartPox())
         
         //Swipe
         SwipeInit(view: view)

@@ -12,11 +12,12 @@ struct User{
     private var user =  SKSpriteNode()
     private var cam = SKCameraNode()
 
-    mutating func UserInit(scene: SKScene) {
+    mutating func UserInit(scene: SKScene,start: CGPoint) {
     //User Create
     self.user = SKSpriteNode(imageNamed: "mazeCharacter")
     user.size.height = 60
     user.size.width = 60
+        user.position = start
     //user.position = Start.position
     scene.addChild(user)
     
@@ -30,9 +31,5 @@ struct User{
  }
     func getUser() -> SKSpriteNode{
         return user
-    }
-    
-    func setUserpox(start: CGPoint) {
-        user.position = start
     }
 }
