@@ -79,5 +79,8 @@ class MazeLV1 : Maze{
     public func getEndPox() -> CGPoint {
         return EndPox
     }
- 
+    
+    public func getMatrix() -> [[SKSpriteNode?]]{
+        return obst
+    }
 }
