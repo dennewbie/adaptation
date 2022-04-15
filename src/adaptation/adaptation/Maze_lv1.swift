@@ -83,4 +83,6 @@ class MazeLV1 : Maze{
     public func getMatrix() -> [[SKSpriteNode?]]{
         return obst
     }
+    
+    
 }
