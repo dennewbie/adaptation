@@ -17,6 +17,7 @@ struct User{
     self.user = SKSpriteNode(imageNamed: "mazeCharacter")
     user.size.height = 60
     user.size.width = 60
+    user.name = "User"
         user.position = start
     //user.position = Start.position
     scene.addChild(user)
@@ -27,6 +28,7 @@ struct User{
     user.physicsBody?.collisionBitMask = 2
     user.physicsBody?.allowsRotation = false
     user.physicsBody?.restitution = 0
+    user.physicsBody?.categoryBitMask = UInt32(bitPattern: 5)
     
  }
     func getUser() -> SKSpriteNode{

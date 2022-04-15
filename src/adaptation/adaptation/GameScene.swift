@@ -8,17 +8,19 @@
 import SpriteKit
 import SwiftUI
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate{
     var Player = User()
+    var point: CGPoint? = nœil
 //    var obstacles :[SKSpriteNode] = [SKSpriteNode]()
 //    var previousTime = TimeInterval()
 //
     let Speed = 2.1
     
-    
     override func didMove(to view: SKView) {
+
         //create maze
         let floor = MazeLV1(m: 14, n: 8, scene: scene!)
+        point = floor.getEndPox()
         //User Init
         Player.UserInit(scene: scene!, start: floor.getStartPox())
         
@@ -26,7 +28,13 @@ class GameScene: SKScene {
         SwipeInit(view: view)
     }
     
+    func didBegin(_ contact: SKPhysicsContact) {
+        if contact.bodyA.categoryBitMask == UInt32(bitPattern: 5) || contact.bodyB.categoryBitMask == UInt32(bitPattern: 5){
+            debugPrint("we")
+        }
+    }
     
+
 
 //
 //    override func update(_ currentTime: TimeInterval) {
@@ -72,25 +80,21 @@ class GameScene: SKScene {
 
 
     @objc func swipeRight(sender: UISwipeGestureRecognizer){
-        debugPrint("Swipe Right");
         Player.getUser().removeAllActions()
         Player.getUser().physicsBody?.applyImpulse(CGVector(dx: 90.0, dy: 0.0))
     }
 
     @objc func swipeDown (sender: UISwipeGestureRecognizer){
-        debugPrint("Swipe Dowm")
         Player.getUser().removeAllActions()
         Player.getUser().physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: -90.0))
     }
 
     @objc func swipeUp (sender: UISwipeGestureRecognizer){
-        debugPrint("Swipe Up")
         Player.getUser().removeAllActions()
         Player.getUser().physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 90.0))
     }
 
     @objc func swipeLeft (sender: UISwipeGestureRecognizer){
-        debugPrint("Swipe Left")
         Player.getUser().removeAllActions()
         Player.getUser().physicsBody?.applyImpulse(CGVector(dx: -90.0, dy: 0.0))
     }
