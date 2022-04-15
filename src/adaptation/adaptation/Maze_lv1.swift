@@ -18,7 +18,7 @@ class MazeLV1 : Maze{
     
     override init(m: Int, n: Int, scene: SKScene){
         self.obst = [[nil,nil,nil,nil,nil,nil,nil,nil,nil], //Wall
-                     [nil,nil,nil,SKSpriteNode(),nil,SKSpriteNode(),SKSpriteNode(),Start,nil],
+                     [nil,nil,nil,SKSpriteNode(),nil,nil,nil,Start,nil],
                      [nil,nil,SKSpriteNode(),SKSpriteNode(),nil,SKSpriteNode(),SKSpriteNode(),nil,nil],
                      [nil,nil,nil,nil,nil,SKSpriteNode(),SKSpriteNode(),nil,nil],
                      [nil,SKSpriteNode(),SKSpriteNode(),SKSpriteNode(),nil,nil,nil,nil,nil],
@@ -42,7 +42,7 @@ class MazeLV1 : Maze{
                 if (obst[i][j] != nil && obst[i][j] != Start  && obst[i][j] != End){
                     obst[i][j] = SKSpriteNode(imageNamed: "obstacleTileFloor")
                     obst[i][j]?.position = CGPoint(x: (super.xpos+(100*j)), y: (super.ypos-(100*i)))
-                    obst[i][j]?.size = CGSize(width: 100, height: 100)
+                    obst[i][j]?.size = CGSize(width: 95, height: 95)
                     //wall Physic
                     obst[i][j]?.physicsBody = SKPhysicsBody(texture:  (obst[i][j]?.texture)!, size:  obst[i][j]!.size)
                     obst[i][j]?.physicsBody?.affectedByGravity = false
@@ -63,8 +63,6 @@ class MazeLV1 : Maze{
                         EndPox = CGPoint(x: (super.xpos+(100*j)), y: (super.ypos-(100*i)))
                         End.size = CGSize(width: 100, height: 100)
                         End.position = CGPoint(x: (super.xpos+(100*j)), y: (super.ypos-(100*i)))
-                        End.physicsBody?.categoryBitMask = UInt32(bitPattern: 5)
-            
                         Obst.addChild(End)
                     }
                 }

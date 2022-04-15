@@ -47,9 +47,9 @@ class Maze{
                     floor[i][j] = SKSpriteNode(imageNamed: "Walls")
                     floor[i][j]?.size = CGSize(width: 20, height: 100)
                     if (j==0) {
-                        floor[i][j]?.position = CGPoint(x: (xpos+(100*j)), y: (ypos-(100*i)))
+                        floor[i][j]?.position = CGPoint(x: (xpos+40), y: (ypos-(100*i)))
                     } else {
-                        floor[i][j]?.position = CGPoint(x: (xpos+(100*j)), y: (ypos-(100*i)))
+                        floor[i][j]?.position = CGPoint(x: (xpos+(95*j)), y: (ypos-(100*i)))
                     }
                     
                     //wall Physics

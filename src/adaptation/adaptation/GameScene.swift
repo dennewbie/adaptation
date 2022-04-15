@@ -10,6 +10,7 @@ import SwiftUI
 
 class GameScene: SKScene {
     var Player = User()
+    var EndPox: CGPoint = CGPoint()
 //    var obstacles :[SKSpriteNode] = [SKSpriteNode]()
 //    var previousTime = TimeInterval()
 //
@@ -29,16 +30,22 @@ class GameScene: SKScene {
         
         self.addChild(instructionLabel)
         
-        
         //create maze
         let floor = MazeLV1(m: 14, n: 8, scene: scene!)
+        EndPox = floor.getEndPox()
         //User Init
         Player.UserInit(scene: scene!, start: floor.getStartPox())
         
         //Swipe
         SwipeInit(view: view)
     }
-    
+    override func update(_ currentTime: TimeInterval) {
+        if (Player.getUser().position.x > EndPox.x-21 && Player.getUser().position.x < EndPox.x+19
+            && Player.getUser().position.y > EndPox.y-82 && Player.getUser().position.y < EndPox.y+19)
+        {
+            //End Here
+        }
+    }
 
 //
 //    override func update(_ currentTime: TimeInterval) {
