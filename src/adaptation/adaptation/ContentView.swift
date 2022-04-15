@@ -43,13 +43,13 @@ struct ContentView: View {
                 SpriteView(scene: scene)
                     .edgesIgnoringSafeArea(.all)
                 
-                NavigationLink(destination: PauseView(), tag: 1, selection: $selectedButton) {
-                    CustomButton(buttonAction: {
-                        print("pause btn")
-                        self.selectedButton = 1
-                    }, imageName: "pause.circle", buttonHeight: 60, buttonWidth: 60, buttonAlignment: .center, buttonColor: contentViewColor, systemImage: true)
-                    .position(x: UIScreen.screenWidth / 2, y: UIScreen.screenHeight - 70)
-                }
+//                NavigationLink(destination: PauseView(), tag: 1, selection: $selectedButton) {
+//                    CustomButton(buttonAction: {
+//                        print("pause btn")
+//                        self.selectedButton = 1
+//                    }, imageName: "pause.circle", buttonHeight: 60, buttonWidth: 60, buttonAlignment: .center, buttonColor: contentViewColor, systemImage: true)
+//                    .position(x: UIScreen.screenWidth / 2, y: UIScreen.screenHeight - 70)
+//                }
                 
             }
             .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: .center)
