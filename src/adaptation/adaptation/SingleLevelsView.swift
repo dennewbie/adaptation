@@ -8,33 +8,35 @@
 import SwiftUI
 
 struct SingleLevelsView: View {
-    let level : String
-    let colorDark : Color = Color(red: 37 / 255, green: 17 / 255, blue: 97 / 255)
-    let colorLight : Color = Color(red: 132 / 255, green: 93 / 255, blue: 250 / 255)
-    var levelComplete : Bool = false
+    let levelID : String
+    let colorDark : UIColor = UIColor(red: 37 / 255, green: 17 / 255, blue: 97 / 255, alpha: 1.0)
+    let colorLight : UIColor = UIColor(red: 132 / 255, green: 93 / 255, blue: 250 / 255, alpha: 1.0)
+    var isLevelAvailable : Bool
    
     var body: some View {
-        if (levelComplete) {
+        if (isLevelAvailable) {
             ZStack {
-                Rectangle()
-                    .frame(width: UIScreen.screenWidth / 2.5, height: UIScreen.screenHeight / 6)
-                    .foregroundColor(colorLight)
-                    .cornerRadius(30)
-                Text(level)
+                CustomButton(buttonAction: {
+                    print("av level")
+                }, imageName: "availableLevel", buttonHeight: UIScreen.screenHeight / 6, buttonWidth: UIScreen.screenWidth / 2.5, buttonAlignment: .center, buttonColor: colorLight, systemImage: false)
+                .frame(width: UIScreen.screenWidth / 2.2, height: UIScreen.screenHeight / 6)
+                Text(levelID)
                     .foregroundColor(.white)
+                    .font(.system(size: 35, weight: .bold, design: .default))
             }
+            .padding(.bottom, 20)
         } else {
-            ZStack{
-                Rectangle()
-                    .frame(width: UIScreen.screenWidth / 2.5, height: UIScreen.screenHeight / 6)
-                    .foregroundColor(colorDark)
-                    .cornerRadius(30)
-                    .padding(8)
-                Text(level)
+            ZStack {
+                CustomButton(buttonAction: {
+                    print("!av level")
+                }, imageName: "notAvailableLevel", buttonHeight: UIScreen.screenHeight / 6, buttonWidth: UIScreen.screenWidth / 2.5, buttonAlignment: .center, buttonColor: colorDark, systemImage: false)
+                .frame(width: UIScreen.screenWidth / 2.2, height: UIScreen.screenHeight / 6)
+                .disabled(true)
+                Text(levelID)
                     .foregroundColor(.white)
-                    .font(.system(size: 35))
-                    .fontWeight(.bold)
+                    .font(.system(size: 35, weight: .bold, design: .default))
             }
+            .padding(.bottom, 20)
         }
     }
 }
