@@ -9,20 +9,8 @@ import SwiftUI
 import SpriteKit
 import AVFoundation
 
-var audioPlayer: AVAudioPlayer?
-
-func playSound(sound: String, type: String) {
-    if let path = Bundle.main.path(forResource: sound, ofType: type) {
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-            // audioPlayer?.play()
-        } catch {
-            print("ERROR")
-        }
-    }
-}
-
 struct ContentView: View {
+    @State var audioPlayer: AVAudioPlayer?
     let contentViewColor: UIColor = UIColor(red: 132 / 255, green: 93 / 255, blue: 250 / 255, alpha: 1.0)
     @State private var selectedButton: Int? = nil
     init() {
@@ -55,15 +43,29 @@ struct ContentView: View {
             .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: .center)
             .edgesIgnoringSafeArea(.all)
             .onAppear(perform: {
-                playSound(sound: "musicGame", type: "wav")
-                audioPlayer?.numberOfLoops = 100
-                audioPlayer?.volume = 0.5
+//                playSound()
+                audioPlayer?.numberOfLoops = 10000
+                audioPlayer?.volume = UserDefaults.standard.float(forKey: "soundVolume")
             })
         }
         .navigationBarTitle("Title")
         .navigationBarHidden(true)
         
     }
+    
+    func playSound() {
+        guard let path = Bundle.main.path(forResource: "musicGame", ofType:"wav") else {
+            return }
+        let url = URL(fileURLWithPath: path)
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
 }
 
 struct LabelView: View {

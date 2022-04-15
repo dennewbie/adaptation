@@ -92,9 +92,9 @@ struct BottomBlock: View {
 }
 
 struct HomeView: View {
+    @State private var soundVolume = UserDefaults.standard.float(forKey: "soundVolume")
     init() {
         UINavigationBar.setAnimationsEnabled(false)
-        UserDefaults.standard.set(true, forKey: "isSoundActive")
     }
     
     var body: some View {
