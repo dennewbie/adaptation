@@ -9,20 +9,8 @@ import SwiftUI
 import SpriteKit
 import AVFoundation
 
-var audioPlayer: AVAudioPlayer?
-
-func playSound(sound: String, type: String) {
-    if let path = Bundle.main.path(forResource: sound, ofType: type) {
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-            audioPlayer?.play()
-        } catch {
-            print("ERROR")
-        }
-    }
-}
-
 struct ContentView: View {
+    @State var audioPlayer: AVAudioPlayer?
     let contentViewColor: UIColor = UIColor(red: 132 / 255, green: 93 / 255, blue: 250 / 255, alpha: 1.0)
     @State private var selectedButton: Int? = nil
     init() {
@@ -31,7 +19,7 @@ struct ContentView: View {
     
     var scene: SKScene {
         let scene = SKScene(fileNamed: "GameScene")
-        scene!.size = CGSize(width: 820, height: 1570)
+        scene!.size = CGSize(width: 820, height: 1770)
         scene?.scaleMode = .aspectFit
         return scene!
     }
@@ -39,42 +27,45 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                VStack {
-                    NavigationLink(destination: PauseView(), tag: 2, selection: $selectedButton) {
-                        CustomButton(buttonAction: {
-                            print("pause button clicked")
-                            self.selectedButton = 2
-                            audioPlayer?.stop()
-                        }, imageName: "pause.circle", buttonHeight: 60, buttonWidth: 60, buttonAlignment: .topTrailing, buttonColor: contentViewColor, systemImage: true)
-                    }
-                }
-                .frame(width: UIScreen.screenWidth, height: 60, alignment: .topTrailing)
+            ZStack {
+                SpriteView(scene: scene)
+                    .edgesIgnoringSafeArea(.all)
                 
+//                NavigationLink(destination: PauseView(), tag: 1, selection: $selectedButton) {
+//                    CustomButton(buttonAction: {
+//                        print("pause btn")
+//                        self.selectedButton = 1
+//                    }, imageName: "pause.circle", buttonHeight: 60, buttonWidth: 60, buttonAlignment: .center, buttonColor: contentViewColor, systemImage: true)
+//                    .position(x: UIScreen.screenWidth / 2, y: UIScreen.screenHeight - 70)
+//                }
                 
-                VStack {
-                    SpriteView(scene: scene)
-                        .edgesIgnoringSafeArea(.all)
-                }
-                .edgesIgnoringSafeArea(.all)
-                .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight - 250, alignment: .center)
-                
-                VStack {
-                    LabelView()
-                }
-                .frame(width: UIScreen.screenWidth, height: 50, alignment: .bottom)
-                .padding(.bottom, 20)
             }
+            .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: .center)
+            .edgesIgnoringSafeArea(.all)
             .onAppear(perform: {
-                playSound(sound: "musicGame", type: "wav")
-                audioPlayer?.numberOfLoops = 100
-                audioPlayer?.volume = 0.5
+//                playSound()
+                audioPlayer?.numberOfLoops = 10000
+                audioPlayer?.volume = UserDefaults.standard.float(forKey: "soundVolume")
             })
         }
         .navigationBarTitle("Title")
         .navigationBarHidden(true)
         
     }
+    
+    func playSound() {
+        guard let path = Bundle.main.path(forResource: "musicGame", ofType:"wav") else {
+            return }
+        let url = URL(fileURLWithPath: path)
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
 }
 
 struct LabelView: View {
@@ -94,6 +85,3 @@ struct LabelView: View {
         }
     }
 }
-
-
-

@@ -9,7 +9,7 @@ import SwiftUI
 import MediaPlayer
 
 struct SliderView: View {
-    @State private var music:Float = 0.5
+    @State private var soundVolume:Float = UserDefaults.standard.float(forKey: "soundVolume")
     let sliderOptionLabelText: String
     let firstIconName: String
     let secondIconName: String
@@ -25,8 +25,9 @@ struct SliderView: View {
             HStack {
                 GlyphImageView(imageName: firstIconName, leadingPading: 40.0, trailingPadding: 25.0, glyphSize: 20)
                 
-                Slider(value: $music, in: 0...1,step: 0.0625, onEditingChanged: { data in
-                    MPVolumeView.setVolume(self.music)
+                Slider(value: $soundVolume, in: 0...1,step: 0.0625, onEditingChanged: { data in
+                    UserDefaults.standard.set(self.soundVolume, forKey: "soundVolume")
+                    MPVolumeView.setVolume(self.soundVolume)
                 })
                 .accentColor(Color( red: 132 / 255, green: 93 / 255, blue: 250 / 255))
                 
