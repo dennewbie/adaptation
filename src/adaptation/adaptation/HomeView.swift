@@ -24,6 +24,11 @@ struct TopBlock: View {
                     CustomButton(buttonAction: {
                         print("info button pressed")
                         self.selectedButton = 3
+                        /* HACK @simone */
+                        let availableLevels: [Bool] = UserDefaults.standard.array(forKey: "availableLevels") as? [Bool] ?? [Bool]()
+                        let newAvailableLevels: [Bool] = [availableLevels[0], true, availableLevels[2], availableLevels[3]]
+                        UserDefaults.standard.set(newAvailableLevels, forKey: "availableLevels")
+                        
                     }, imageName: "info.circle", buttonHeight: 100, buttonWidth: 100, buttonAlignment: .center, buttonColor: homeViewColorSettingsButton, systemImage: true)
                     .padding(.all, UIScreen.screenWidth / 12)
                 }
@@ -93,8 +98,16 @@ struct BottomBlock: View {
 
 struct HomeView: View {
     @State private var soundVolume = UserDefaults.standard.float(forKey: "soundVolume")
+    private let hasLaunchedBefore = UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
+    
+    
     init() {
         UINavigationBar.setAnimationsEnabled(false)
+        if (!hasLaunchedBefore) {
+            let availableLevels: [Bool] = [true, false, false, false]
+            UserDefaults.standard.set(availableLevels, forKey: "availableLevels")
+            UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
+        }
     }
     
     var body: some View {
