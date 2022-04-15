@@ -34,6 +34,8 @@ struct WinContentView: View {
     
     init() {
         UINavigationBar.setAnimationsEnabled(false)
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications() // For removing all delivered notification
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     }
     
     var body: some View {
@@ -48,7 +50,7 @@ struct WinContentView: View {
                         }, imageName: homeSymbol, buttonHeight: 100, buttonWidth: 100, buttonAlignment: .center, buttonColor: winViewColor, systemImage: true)
                     }
                     
-                    NavigationLink(destination: SettingsView(), tag: 2, selection: $selectedButton) {
+                    NavigationLink(destination: LevelsView(), tag: 2, selection: $selectedButton) {
                         CustomButton(buttonAction: {
                             print("levels button pressed")
                             self.selectedButton = 2

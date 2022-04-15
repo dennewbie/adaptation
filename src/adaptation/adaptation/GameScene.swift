@@ -2,7 +2,7 @@
 //  GameScene.swift
 //  templateSpriteKit
 //
-//  Created by Ignazio Finizio on 07/04/22.
+//  Created by Simone Cioffi on 07/04/22.
 //
 
 import SpriteKit
@@ -16,7 +16,6 @@ class GameScene: SKScene {
     var floor: MazeLV1?
     let Speed = 2.1
     var randomobst = SKNode()
-    
     
     override func didMove(to view: SKView) {
         backgroundColor = UIColor(red: 255 / 255, green: 255 / 255, blue: 255 / 255, alpha: 1.0)
@@ -44,10 +43,11 @@ class GameScene: SKScene {
         scene?.addChild(randomobst)
     }
     override func update(_ currentTime: TimeInterval) {
-        if (Player.getUser().position.x > EndPox.x-21 && Player.getUser().position.x < EndPox.x+19
+        if (Player.getUser().position.x > EndPox.x-21 && Player.getUser().position.x < EndPox.x+25
             && Player.getUser().position.y > EndPox.y-82 && Player.getUser().position.y < EndPox.y+19)
         {
             //End Here
+            ContentView.sharedInstance = true
         }
         
         var obsta: [[SKSpriteNode?]] = floor!.getMatrix()
