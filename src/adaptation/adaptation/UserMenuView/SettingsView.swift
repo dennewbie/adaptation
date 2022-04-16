@@ -7,55 +7,12 @@
 
 import SwiftUI
 
-struct SettingsViewContent: View {
-    let settingsViewColor: UIColor = UIColor(red: 132 / 255, green: 93 / 255, blue: 250 / 255, alpha: 1.0)
-    let confirmSymbol: String = String("confirmButton")
-    let buttonWidth: CGFloat = 60
-    let buttonHeigth: CGFloat = 60
-    @State private var selectedButton: Int? = nil
-    
-    var body: some View {
-        VStack {
-            TitleMenuView(titleLabelText: "Settings")
-            SliderView(sliderOptionLabelText: "Music", firstIconName: "speaker.wave.1", secondIconName: "speaker.wave.3")
-            
-            NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
-                CustomButton(buttonAction: {
-                    print("confirm button pressed")
-                    self.selectedButton = 1
-                }, imageName: confirmSymbol, buttonHeight: buttonHeigth, buttonWidth: buttonWidth, buttonAlignment: .center, buttonColor: settingsViewColor, systemImage: false)
-                .padding(.top, 25)
-            }
-        }
-    }
-}
-
 struct SettingsView: View {
-    init() {
-        UINavigationBar.setAnimationsEnabled(false)
-    }
-    
+    let alertTitle: String = "Settings"
+    let alertHeigth: CGFloat = 350
+    let alertWidth: CGFloat = 350
+    let firstButtonSymbol: String = "confirmButton"
     var body: some View {
-        NavigationView {
-            ZStack {
-                Rectangle()
-                    .opacity(0.15)
-                    .edgesIgnoringSafeArea(.all)
-                    .overlay(
-                        VStack {
-                            Image("pauseView").resizable().frame(width: 350, height: 350, alignment: .center)
-                                .overlay(SettingsViewContent())
-                        }
-                    )
-            }
-        }
-        .navigationBarTitle("Title")
-        .navigationBarHidden(true)
+        CustomAlert(alertTitle: alertTitle, alertHeigth: alertHeigth, alertWidth: alertWidth, firstButtonSymbol: firstButtonSymbol, secondButtonSymbol: nil, alertType: 2)
     }
-}
-
-extension UIScreen{
-    static let screenWidth = UIScreen.main.bounds.size.width
-    static let screenHeight = UIScreen.main.bounds.size.height
-    static let screenSize = UIScreen.main.bounds.size
 }

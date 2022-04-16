@@ -23,6 +23,7 @@
 		525D6F5D2806FEA2000FADC5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F5C2806FEA2000FADC5 /* HomeView.swift */; };
 		525D6F6228072002000FADC5 /* SingleLevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F5F28072002000FADC5 /* SingleLevelsView.swift */; };
 		525D6F6328072002000FADC5 /* LevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D6F6028072002000FADC5 /* LevelsView.swift */; };
+		52867BA4280B624200016D5E /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52867BA3280B624200016D5E /* CustomAlert.swift */; };
 		52BD73FB280409130080A6F9 /* adaptationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD73FA280409130080A6F9 /* adaptationApp.swift */; };
 		52BD73FD280409130080A6F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD73FC280409130080A6F9 /* ContentView.swift */; };
 		52BD73FF280409140080A6F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BD73FE280409140080A6F9 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		525D6F5C2806FEA2000FADC5 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		525D6F5F28072002000FADC5 /* SingleLevelsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleLevelsView.swift; sourceTree = "<group>"; };
 		525D6F6028072002000FADC5 /* LevelsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsView.swift; sourceTree = "<group>"; };
+		52867BA3280B624200016D5E /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		52BD73F7280409130080A6F9 /* adaptation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adaptation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BD73FA280409130080A6F9 /* adaptationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adaptationApp.swift; sourceTree = "<group>"; };
 		52BD73FC280409130080A6F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				525C42CC280848D700D434C6 /* InfoView.swift */,
 				F44F2154280880700091A8FF /* SwitchView.swift */,
 				52121E5B2805901600CAE849 /* CustomButton.swift */,
+				52867BA3280B624200016D5E /* CustomAlert.swift */,
 			);
 			path = UserMenuView;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				5233779B280AC01C001563DA /* GameSingleton.swift in Sources */,
 				82AEAB14280731D300B25FE6 /* Maze_lv1.swift in Sources */,
 				525D6F5D2806FEA2000FADC5 /* HomeView.swift in Sources */,
+				52867BA4280B624200016D5E /* CustomAlert.swift in Sources */,
 				52121E5828057DF800CAE849 /* WinContentView.swift in Sources */,
 				DBB948982805B86F0036C0FA /* SettingsView.swift in Sources */,
 				52BD73FD280409130080A6F9 /* ContentView.swift in Sources */,
