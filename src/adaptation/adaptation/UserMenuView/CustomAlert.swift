@@ -22,35 +22,59 @@ struct InternalAlertView: View {
     var body: some View {
         VStack {
             TitleMenuView(titleLabelText: alertTitle)
-            SliderView(sliderOptionLabelText: "Music", firstIconName: "speaker.wave.1", secondIconName: "speaker.wave.3")
             
             HStack {
                 switch (alertType) {
+                    // Pause Menu
                 case 1:
-                    NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
-                        CustomButton(buttonAction: {
-                            print("home button pressed")
-                            self.selectedButton = 1
-                        }, imageName: firstButtonSymbol!, buttonHeight: buttonHeigth, buttonWidth: buttonWidth, buttonAlignment: .trailing, buttonColor: viewColor, systemImage: true)
-                        .padding(.top, 25)
+                    VStack {
+                        SliderView(sliderOptionLabelText: "Music", firstIconName: "speaker.wave.1", secondIconName: "speaker.wave.3")
+                        HStack {
+                            NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
+                                CustomButton(buttonAction: {
+                                    print("home button pressed")
+                                    self.selectedButton = 1
+                                }, imageName: firstButtonSymbol!, buttonHeight: buttonHeigth, buttonWidth: buttonWidth, buttonAlignment: .trailing, buttonColor: viewColor, systemImage: true)
+                                .padding(.top, 25)
+                            }
+                            
+                            NavigationLink(destination: ContentView(), tag: 2, selection: $selectedButton) {
+                                CustomButton(buttonAction: {
+                                    print("content view button pressed")
+                                    self.selectedButton = 2
+                                }, imageName: secondButtonSymbol!, buttonHeight: buttonHeigth, buttonWidth: buttonWidth, buttonAlignment: .leading, buttonColor: viewColor, systemImage: true)
+                                .padding(.top, 25)
+                            }
+                        }
                     }
-                    
-                    NavigationLink(destination: ContentView(), tag: 2, selection: $selectedButton) {
-                        CustomButton(buttonAction: {
-                            print("content view button pressed")
-                            self.selectedButton = 2
-                        }, imageName: secondButtonSymbol!, buttonHeight: buttonHeigth, buttonWidth: buttonWidth, buttonAlignment: .leading, buttonColor: viewColor, systemImage: true)
-                        .padding(.top, 25)
-                    }
-                    
+                    // Settings Menu
                 case 2:
-                    NavigationLink(destination: HomeView(), tag: 3, selection: $selectedButton) {
-                        CustomButton(buttonAction: {
-                            print("confirm button pressed")
-                            self.selectedButton = 3
-                        }, imageName: firstButtonSymbol!, buttonHeight: buttonHeigth, buttonWidth: buttonWidth, buttonAlignment: .center, buttonColor: viewColor, systemImage: false)
-                        .padding(.top, 25)
+                    VStack {
+                        SliderView(sliderOptionLabelText: "Music", firstIconName: "speaker.wave.1", secondIconName: "speaker.wave.3")
+                        NavigationLink(destination: HomeView(), tag: 3, selection: $selectedButton) {
+                            CustomButton(buttonAction: {
+                                print("confirm button pressed")
+                                self.selectedButton = 3
+                            }, imageName: firstButtonSymbol!, buttonHeight: buttonHeigth, buttonWidth: buttonWidth, buttonAlignment: .center, buttonColor: viewColor, systemImage: false)
+                            .padding(.top, 25)
+                        }
                     }
+                    // Info Menu
+                case 3:
+                    VStack {
+                        Text("Music: \"A Sinister Puzzle\",\nfrom PlayOnLoop.com")
+                            .multilineTextAlignment(.center)
+                        Text("Sound effect: mixkit-arcade\n-mechanical-bling-210.wav")
+                            .multilineTextAlignment(.center)
+                        NavigationLink(destination: HomeView(), tag: 4, selection: $selectedButton) {
+                            CustomButton(buttonAction: {
+                                print("confirm button pressed")
+                                self.selectedButton = 4
+                            }, imageName: firstButtonSymbol!, buttonHeight: buttonHeigth, buttonWidth: buttonWidth, buttonAlignment: .center, buttonColor: viewColor, systemImage: false)
+                            .padding(.top, 25)
+                        }
+                    }
+                    
                 default:
                     CustomButton(buttonAction: {
                         print("Errror loading Alert")
