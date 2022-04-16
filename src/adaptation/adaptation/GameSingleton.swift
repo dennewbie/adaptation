@@ -11,6 +11,7 @@ class GameSingleton {
     static let shared = GameSingleton()
     var levelCompleted: Bool = false
     var currentLevel: Int = 1
+    
     //Initializer access level change now
     private init() { }
     

@@ -50,7 +50,7 @@ struct HomeSpriteView: View {
         scene?.scaleMode = .aspectFit
         return scene!
     }
-
+    
     var body: some View {
         SpriteView(scene: scene)
             .edgesIgnoringSafeArea(.all)

@@ -78,6 +78,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52867B9D280B440E00016D5E /* WinView */ = {
+			isa = PBXGroup;
+			children = (
+				52121E5628057DF800CAE849 /* WinContentView.swift */,
+				52121E5928057E0F00CAE849 /* WinContentScene.swift */,
+				52121E5528057DF800CAE849 /* WinContentScene.sks */,
+			);
+			path = WinView;
+			sourceTree = "<group>";
+		};
+		52867B9E280B445F00016D5E /* UserMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				525931162805DEC60028838F /* TitleMenuView.swift */,
+				DBB948972805B86F0036C0FA /* SettingsView.swift */,
+				525931172805DEC60028838F /* PauseView.swift */,
+				525931182805DEC60028838F /* SliderView.swift */,
+				525C42CC280848D700D434C6 /* InfoView.swift */,
+				F44F2154280880700091A8FF /* SwitchView.swift */,
+				52121E5B2805901600CAE849 /* CustomButton.swift */,
+			);
+			path = UserMenuView;
+			sourceTree = "<group>";
+		};
+		52867BA0280B448100016D5E /* LevelsView */ = {
+			isa = PBXGroup;
+			children = (
+				525D6F6028072002000FADC5 /* LevelsView.swift */,
+				525D6F5F28072002000FADC5 /* SingleLevelsView.swift */,
+			);
+			path = LevelsView;
+			sourceTree = "<group>";
+		};
+		52867BA1280B44A500016D5E /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				525C42D22808615500D434C6 /* HomeContentScene.swift */,
+				525D6F5C2806FEA2000FADC5 /* HomeView.swift */,
+				525C42D32808615500D434C6 /* HomeContentScene.sks */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		52867BA2280B44E000016D5E /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				525C42DA28086AC500D434C6 /* buttonSound.wav */,
+				525C42DB28086AC500D434C6 /* musicGame.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		52BD73EE280409130080A6F9 = {
 			isa = PBXGroup;
 			children = (
@@ -97,28 +149,15 @@
 		52BD73F9280409130080A6F9 /* adaptation */ = {
 			isa = PBXGroup;
 			children = (
-				82AEAB19280731F600B25FE6 /* Maze */,
 				52BD73FA280409130080A6F9 /* adaptationApp.swift */,
-				52BD73FC280409130080A6F9 /* ContentView.swift */,
-				525C42D22808615500D434C6 /* HomeContentScene.swift */,
-				DBB948972805B86F0036C0FA /* SettingsView.swift */,
-				525931172805DEC60028838F /* PauseView.swift */,
-				525D6F5C2806FEA2000FADC5 /* HomeView.swift */,
-				525C42CC280848D700D434C6 /* InfoView.swift */,
-				525D6F6028072002000FADC5 /* LevelsView.swift */,
-				525D6F5F28072002000FADC5 /* SingleLevelsView.swift */,
-				525931182805DEC60028838F /* SliderView.swift */,
-				525C42DA28086AC500D434C6 /* buttonSound.wav */,
-				525C42DB28086AC500D434C6 /* musicGame.wav */,
-				525931162805DEC60028838F /* TitleMenuView.swift */,
-				52121E5628057DF800CAE849 /* WinContentView.swift */,
-				F44F2154280880700091A8FF /* SwitchView.swift */,
-				52121E5B2805901600CAE849 /* CustomButton.swift */,
-				52121E5928057E0F00CAE849 /* WinContentScene.swift */,
-				525C42D32808615500D434C6 /* HomeContentScene.sks */,
-				52121E5528057DF800CAE849 /* WinContentScene.sks */,
-				52BD73FE280409140080A6F9 /* Assets.xcassets */,
+				82AEAB19280731F600B25FE6 /* Maze */,
+				52867BA1280B44A500016D5E /* HomeView */,
+				52867B9E280B445F00016D5E /* UserMenuView */,
+				52867BA0280B448100016D5E /* LevelsView */,
+				52867B9D280B440E00016D5E /* WinView */,
+				52867BA2280B44E000016D5E /* Sound */,
 				52BD7400280409140080A6F9 /* Preview Content */,
+				52BD73FE280409140080A6F9 /* Assets.xcassets */,
 			);
 			path = adaptation;
 			sourceTree = "<group>";
@@ -134,6 +173,7 @@
 		82AEAB19280731F600B25FE6 /* Maze */ = {
 			isa = PBXGroup;
 			children = (
+				52BD73FC280409130080A6F9 /* ContentView.swift */,
 				82AEAB1B2807324A00B25FE6 /* Player */,
 				82AEAB1A2807320B00B25FE6 /* Levels */,
 				82E5E5092804641E00E823FF /* GameScene.sks */,

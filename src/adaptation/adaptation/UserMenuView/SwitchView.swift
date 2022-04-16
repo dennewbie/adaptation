@@ -10,7 +10,7 @@ import SwiftUI
 struct SwitchView: View {
     let color: Color = Color(UIColor(red: 132 / 255, green: 93 / 255, blue: 250 / 255, alpha: 1.0))
     var switchName: String
-
+    
     @State private var isSoundActive = true
     
     var body: some View {

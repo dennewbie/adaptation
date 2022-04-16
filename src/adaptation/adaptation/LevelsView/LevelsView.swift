@@ -30,7 +30,7 @@ struct LevelsView: View {
                             }, imageName: "arrowshape.turn.up.backward.circle", buttonHeight: 65, buttonWidth: 65, buttonAlignment: .topLeading, buttonColor: availableLevelColor, systemImage: true)
                         }
                     }
-
+                    
                     VStack {
                         Text("Levels")
                             .foregroundColor(Color(red: 37/255, green: 17/255, blue: 97/255))

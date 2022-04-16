@@ -14,7 +14,7 @@ struct SingleLevelsView: View {
     var isLevelAvailable : Bool
     @Binding var levelTag: Int?
     var levelToAccess: Int
-   
+    
     var body: some View {
         if (isLevelAvailable) {
             ZStack {
