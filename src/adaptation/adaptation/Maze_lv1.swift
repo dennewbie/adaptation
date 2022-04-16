@@ -84,5 +84,7 @@ class MazeLV1 : Maze{
         return obst
     }
     
-    
+    public func deleteMatrix()  {
+        Obst.removeAllChildren()
+    }
 }
