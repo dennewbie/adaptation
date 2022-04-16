@@ -30,18 +30,18 @@ struct InternalAlertView: View {
                     VStack {
                         SliderView(sliderOptionLabelText: "Music", firstIconName: "speaker.wave.1", secondIconName: "speaker.wave.3")
                         HStack {
-                            NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
+                            NavigationLink(destination: HomeView(), tag: 20, selection: $selectedButton) {
                                 CustomButton(buttonAction: {
                                     print("home button pressed")
-                                    self.selectedButton = 1
+                                    self.selectedButton = 20
                                 }, imageName: firstButtonSymbol!, buttonHeight: buttonHeigth, buttonWidth: buttonWidth, buttonAlignment: .trailing, buttonColor: viewColor, systemImage: true)
                                 .padding(.top, 25)
                             }
                             
-                            NavigationLink(destination: ContentView(), tag: 2, selection: $selectedButton) {
+                            NavigationLink(destination: ContentView(), tag: 21, selection: $selectedButton) {
                                 CustomButton(buttonAction: {
                                     print("content view button pressed")
-                                    self.selectedButton = 2
+                                    self.selectedButton = 21
                                 }, imageName: secondButtonSymbol!, buttonHeight: buttonHeigth, buttonWidth: buttonWidth, buttonAlignment: .leading, buttonColor: viewColor, systemImage: true)
                                 .padding(.top, 25)
                             }
@@ -51,10 +51,10 @@ struct InternalAlertView: View {
                 case 2:
                     VStack {
                         SliderView(sliderOptionLabelText: "Music", firstIconName: "speaker.wave.1", secondIconName: "speaker.wave.3")
-                        NavigationLink(destination: HomeView(), tag: 3, selection: $selectedButton) {
+                        NavigationLink(destination: HomeView(), tag: 22, selection: $selectedButton) {
                             CustomButton(buttonAction: {
                                 print("confirm button pressed")
-                                self.selectedButton = 3
+                                self.selectedButton = 22
                             }, imageName: firstButtonSymbol!, buttonHeight: buttonHeigth, buttonWidth: buttonWidth, buttonAlignment: .center, buttonColor: viewColor, systemImage: false)
                             .padding(.top, 25)
                         }
@@ -66,10 +66,10 @@ struct InternalAlertView: View {
                             .multilineTextAlignment(.center)
                         Text("Sound effect: mixkit-arcade\n-mechanical-bling-210.wav")
                             .multilineTextAlignment(.center)
-                        NavigationLink(destination: HomeView(), tag: 4, selection: $selectedButton) {
+                        NavigationLink(destination: HomeView(), tag: 23, selection: $selectedButton) {
                             CustomButton(buttonAction: {
                                 print("confirm button pressed")
-                                self.selectedButton = 4
+                                self.selectedButton = 23
                             }, imageName: firstButtonSymbol!, buttonHeight: buttonHeigth, buttonWidth: buttonWidth, buttonAlignment: .center, buttonColor: viewColor, systemImage: false)
                             .padding(.top, 25)
                         }

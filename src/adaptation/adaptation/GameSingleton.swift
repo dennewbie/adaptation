@@ -9,8 +9,8 @@ import Foundation
 
 class GameSingleton {
     static let shared = GameSingleton()
-    var levelCompleted: Bool = false
-    var currentLevel: Int = 1
+    private var levelCompleted: Bool = false
+    private var currentLevel: Int = 1
     
     //Initializer access level change now
     private init() { }
@@ -19,11 +19,23 @@ class GameSingleton {
         levelCompleted = true
     }
     
+    func initLevel() {
+        levelCompleted = false
+    }
+    
+    func setCurrentLevel(newCurrentLevel: Int) {
+        currentLevel = newCurrentLevel
+    }
+    
+    func getCurrentLevel() -> Int {
+        return currentLevel
+    }
+    
     func isLevelComplete() -> Bool {
         return levelCompleted
     }
     
-    func initLevel() {
-        levelCompleted = false
+    func unlockNextLevel() {
+        currentLevel = currentLevel + 1
     }
 }

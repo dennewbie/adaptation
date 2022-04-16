@@ -31,16 +31,17 @@ struct WinContentView: View {
     let buttonHeigth: CGFloat = 80
     let defaultViewBottomPadding: CGFloat = 30
     @State private var selectedButton: Int? = nil
-    var updateCompleted: Bool = false
     
     init() {
         UINavigationBar.setAnimationsEnabled(false)
-        if (updateCompleted == false) {
-            updateCompleted = true
+        if (GameSingleton.shared.isLevelComplete()) {
+            GameSingleton.shared.initLevel()
+            GameSingleton.shared.unlockNextLevel()
+            print("\nCURRENT LEVEL: \(GameSingleton.shared.getCurrentLevel())")
             let availableLevels: [Bool] = UserDefaults.standard.array(forKey: "availableLevels") as? [Bool] ?? [Bool]()
             var newAvailableLevels: [Bool] = [availableLevels[0], availableLevels[1], availableLevels[2], availableLevels[3]]
-            if (GameSingleton.shared.currentLevel < newAvailableLevels.count) {
-                newAvailableLevels[GameSingleton.shared.currentLevel] = true
+            if ((GameSingleton.shared.getCurrentLevel() - 1) < newAvailableLevels.count) {
+                newAvailableLevels[GameSingleton.shared.getCurrentLevel() - 1] = true
                 UserDefaults.standard.set(newAvailableLevels, forKey: "availableLevels")
             }
         }
@@ -51,17 +52,17 @@ struct WinContentView: View {
             VStack {
                 TopWinView()
                 HStack {
-                    NavigationLink(destination: HomeView(), tag: 1, selection: $selectedButton) {
+                    NavigationLink(destination: HomeView(), tag: 10, selection: $selectedButton) {
                         CustomButton(buttonAction: {
                             print("home button pressed")
-                            self.selectedButton = 1
+                            self.selectedButton = 10
                         }, imageName: homeSymbol, buttonHeight: 100, buttonWidth: 100, buttonAlignment: .center, buttonColor: winViewColor, systemImage: true)
                     }
                     
-                    NavigationLink(destination: LevelsView(), tag: 2, selection: $selectedButton) {
+                    NavigationLink(destination: LevelsView(), tag: 11, selection: $selectedButton) {
                         CustomButton(buttonAction: {
                             print("levels button pressed")
-                            self.selectedButton = 2
+                            self.selectedButton = 11
                         }, imageName: playSymbol, buttonHeight: 100, buttonWidth: 100, buttonAlignment: .trailing, buttonColor: winViewColor, systemImage: true)
                     }
                 }

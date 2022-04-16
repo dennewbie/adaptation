@@ -21,7 +21,7 @@ struct SingleLevelsView: View {
                 CustomButton(buttonAction: {
                     print("av level")
                     self.levelTag = levelToAccess
-                    GameSingleton.shared.currentLevel = levelToAccess
+                    GameSingleton.shared.setCurrentLevel(newCurrentLevel: levelToAccess)
                 }, imageName: "availableLevel", buttonHeight: UIScreen.screenHeight / 6, buttonWidth: UIScreen.screenWidth / 2.5, buttonAlignment: .center, buttonColor: colorLight, systemImage: false)
                 .frame(width: UIScreen.screenWidth / 2.2, height: UIScreen.screenHeight / 6)
                 Text(levelID)

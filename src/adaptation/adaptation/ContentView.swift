@@ -32,22 +32,21 @@ struct ContentView: View {
                 SpriteView(scene: scene)
                     .edgesIgnoringSafeArea(.all)
                 
-                NavigationLink(destination: PauseView(), tag: 1, selection: $selectedButton) {
+                NavigationLink(destination: PauseView(), tag: 40, selection: $selectedButton) {
                     CustomButton(buttonAction: {
                         print("pause btn")
-                        self.selectedButton = 1
+                        self.selectedButton = 40
                     }, imageName: "pause.circle", buttonHeight: 60, buttonWidth: 60, buttonAlignment: .center, buttonColor: contentViewColor, systemImage: true)
                     .position(x: UIScreen.screenWidth / 2, y: UIScreen.screenHeight - 70)
                 }
                 
-                NavigationLink(destination: WinContentView(), tag: 2, selection: $selectedButton) {
+                NavigationLink(destination: WinContentView(), tag: 41, selection: $selectedButton) {
                     EmptyView()
                 }
             }
             .onReceive(timer, perform: { _ in
                 if (GameSingleton.shared.isLevelComplete()) {
-                    GameSingleton.shared.initLevel()
-                    self.selectedButton = 2
+                    self.selectedButton = 41
                 }
             })
             .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: .center)

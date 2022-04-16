@@ -20,18 +20,18 @@ struct TopBlock: View {
     var body: some View {
         VStack{
             HStack {
-                NavigationLink(destination: InfoView(), tag: 3, selection: $selectedButton) {
+                NavigationLink(destination: InfoView(), tag: 30, selection: $selectedButton) {
                     CustomButton(buttonAction: {
                         print("info button pressed")
-                        self.selectedButton = 3
+                        self.selectedButton = 30
                     }, imageName: "info.circle", buttonHeight: 100, buttonWidth: 100, buttonAlignment: .center, buttonColor: homeViewColorSettingsButton, systemImage: true)
                     .padding(.all, UIScreen.screenWidth / 12)
                 }
                 
-                NavigationLink(destination: SettingsView(), tag: 1, selection: $selectedButton) {
+                NavigationLink(destination: SettingsView(), tag: 31, selection: $selectedButton) {
                     CustomButton(buttonAction: {
                         print("settings button pressed")
-                        self.selectedButton = 1
+                        self.selectedButton = 31
                     }, imageName: "gearshape.fill", buttonHeight: 100, buttonWidth: 100, buttonAlignment: .trailing, buttonColor: homeViewColorSettingsButton, systemImage: true)
                     .padding(.all, UIScreen.screenWidth / 12)
                 }
@@ -79,10 +79,10 @@ struct BottomBlock: View {
     
     var body: some View {
         VStack {
-            NavigationLink(destination: LevelsView(), tag: 2, selection: $selectedButton) {
+            NavigationLink(destination: LevelsView(), tag: 32, selection: $selectedButton) {
                 CustomButton(buttonAction: {
                     print("play button pressed")
-                    self.selectedButton = 2
+                    self.selectedButton = 32
                 }, imageName: "play.circle", buttonHeight: 100, buttonWidth: 100, buttonAlignment: .bottom, buttonColor: homeViewColorPlayButton, systemImage: true)
                 .padding(.bottom, 100)
             }
