@@ -53,9 +53,12 @@ struct ContentView: View {
             .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: .center)
             .edgesIgnoringSafeArea(.all)
             .onAppear(perform: {
-                //                playSound()
+                playSound()
                 audioPlayer?.numberOfLoops = 10000
                 audioPlayer?.volume = UserDefaults.standard.float(forKey: "soundVolume")
+            })
+            .onDisappear(perform: {
+                audioPlayer?.stop()
             })
         }
         .navigationBarTitle("Title")
