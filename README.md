@@ -14,7 +14,8 @@ iOS Foundation Program Final Challenge App
 [Guiding Questions](https://github.com/dennewbie/adaptation/blob/main/doc/guiding_questions_ios_team_c.pdf)
 
 ### Demo
-(da aggiungere in futuro)
+https://user-images.githubusercontent.com/41870472/163692399-ec54a4fe-6b65-4b82-8852-d7724aec086a.mp4
+
 
 ### Team
 - [Ilardo Gianluca](https://github.com/gianlucailardo)
