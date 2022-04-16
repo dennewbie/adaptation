@@ -8,30 +8,15 @@
 import SwiftUI
 import SpriteKit
 import AVFoundation
+import Combine
 
 struct ContentView: View {
-    @State static var sharedInstance: Bool = false {
-        didSet {
-            NotificationCenter.default.post(name: .showModal, object: ModalData(onDismiss: {
-                print("Dismiss")
-            }) { isPresented in
-                ZStack {
-                    WinContentView()
-//                    Button("Click here to continue") {
-//                          isPresented.wrappedValue = false
-//                    }
-                }
-            })
-        }
-    }
-    
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var audioPlayer: AVAudioPlayer?
     let contentViewColor: UIColor = UIColor(red: 132 / 255, green: 93 / 255, blue: 250 / 255, alpha: 1.0)
     @State private var selectedButton: Int? = nil
     init() {
         UINavigationBar.setAnimationsEnabled(false)
-        UNUserNotificationCenter.current().removeAllDeliveredNotifications() // For removing all delivered notification
-        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     }
     
     var scene: SKScene {
@@ -41,30 +26,30 @@ struct ContentView: View {
         return scene!
     }
     
-    
     var body: some View {
         NavigationView {
             ZStack {
                 SpriteView(scene: scene)
                     .edgesIgnoringSafeArea(.all)
                 
-                //                NavigationLink(destination: PauseView(), tag: 1, selection: $selectedButton) {
-                //                    CustomButton(buttonAction: {
-                //                        print("pause btn")
-                //                        self.selectedButton = 1
-                //                    }, imageName: "pause.circle", buttonHeight: 60, buttonWidth: 60, buttonAlignment: .center, buttonColor: contentViewColor, systemImage: true)
-                //                    .position(x: UIScreen.screenWidth / 2, y: UIScreen.screenHeight - 70)
-                //                }
+                NavigationLink(destination: PauseView(), tag: 1, selection: $selectedButton) {
+                    CustomButton(buttonAction: {
+                        print("pause btn")
+                        self.selectedButton = 1
+                    }, imageName: "pause.circle", buttonHeight: 60, buttonWidth: 60, buttonAlignment: .center, buttonColor: contentViewColor, systemImage: true)
+                    .position(x: UIScreen.screenWidth / 2, y: UIScreen.screenHeight - 70)
+                }
                 
                 NavigationLink(destination: WinContentView(), tag: 2, selection: $selectedButton) {
-                    Button(action: {
-                        self.selectedButton = 2
-                    }, label: {
-                        // nothing
-                    })
-                    .frame(width: 1, height: 1, alignment: .bottom)
+                    EmptyView()
                 }
             }
+            .onReceive(timer, perform: { _ in
+                if (GameSingleton.shared.isLevelComplete()) {
+                    GameSingleton.shared.initLevel()
+                    self.selectedButton = 2
+                }
+            })
             .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: .center)
             .edgesIgnoringSafeArea(.all)
             .onAppear(perform: {
@@ -108,21 +93,4 @@ struct LabelView: View {
             }
         }
     }
-}
-
-public extension Notification.Name {
-    static let showModal = Notification.Name("showModal")
-}
-
-
-struct ModalData {
-    let onDismiss: (() -> Void)?
-    let content: (Binding<Bool>) -> AnyView
-    
-    init<Content: View>(onDismiss: (() -> Void)? = nil, @ViewBuilder content: @escaping (Binding<Bool>) -> Content) {
-        self.onDismiss = onDismiss
-        self.content = { AnyView(content($0)) }
-    }
-    
-    static let empty = ModalData { _ in EmptyView() }
 }

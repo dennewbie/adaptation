@@ -16,6 +16,7 @@ class GameScene: SKScene {
     var floor: MazeLV1?
     let Speed = 2.1
     var randomobst = SKNode()
+    var mySingleton: GameSingleton = GameSingleton.shared
     
     override func didMove(to view: SKView) {
         backgroundColor = UIColor(red: 255 / 255, green: 255 / 255, blue: 255 / 255, alpha: 1.0)
@@ -47,7 +48,7 @@ class GameScene: SKScene {
             && Player.getUser().position.y > EndPox.y-82 && Player.getUser().position.y < EndPox.y+19)
         {
             //End Here
-            ContentView.sharedInstance = true
+            GameSingleton.shared.completeLevel()
         }
         
         var obsta: [[SKSpriteNode?]] = floor!.getMatrix()

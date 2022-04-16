@@ -31,11 +31,19 @@ struct WinContentView: View {
     let buttonHeigth: CGFloat = 80
     let defaultViewBottomPadding: CGFloat = 30
     @State private var selectedButton: Int? = nil
+    var updateCompleted: Bool = false
     
     init() {
         UINavigationBar.setAnimationsEnabled(false)
-        UNUserNotificationCenter.current().removeAllDeliveredNotifications() // For removing all delivered notification
-        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        if (updateCompleted == false) {
+            updateCompleted = true
+            let availableLevels: [Bool] = UserDefaults.standard.array(forKey: "availableLevels") as? [Bool] ?? [Bool]()
+            var newAvailableLevels: [Bool] = [availableLevels[0], availableLevels[1], availableLevels[2], availableLevels[3]]
+            if (GameSingleton.shared.currentLevel < newAvailableLevels.count) {
+                newAvailableLevels[GameSingleton.shared.currentLevel] = true
+                UserDefaults.standard.set(newAvailableLevels, forKey: "availableLevels")
+            }
+        }
     }
     
     var body: some View {
@@ -62,11 +70,5 @@ struct WinContentView: View {
         }
         .navigationBarTitle("Title")
         .navigationBarHidden(true)
-    }
-}
-
-struct WinContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        WinContentView()
     }
 }

@@ -24,11 +24,6 @@ struct TopBlock: View {
                     CustomButton(buttonAction: {
                         print("info button pressed")
                         self.selectedButton = 3
-                        /* HACK @simone */
-                        let availableLevels: [Bool] = UserDefaults.standard.array(forKey: "availableLevels") as? [Bool] ?? [Bool]()
-                        let newAvailableLevels: [Bool] = [availableLevels[0], true, availableLevels[2], availableLevels[3]]
-                        UserDefaults.standard.set(newAvailableLevels, forKey: "availableLevels")
-                        
                     }, imageName: "info.circle", buttonHeight: 100, buttonWidth: 100, buttonAlignment: .center, buttonColor: homeViewColorSettingsButton, systemImage: true)
                     .padding(.all, UIScreen.screenWidth / 12)
                 }

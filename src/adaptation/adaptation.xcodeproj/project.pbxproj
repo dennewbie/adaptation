@@ -11,6 +11,7 @@
 		52121E5828057DF800CAE849 /* WinContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5628057DF800CAE849 /* WinContentView.swift */; };
 		52121E5A28057E0F00CAE849 /* WinContentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5928057E0F00CAE849 /* WinContentScene.swift */; };
 		52121E5C2805901700CAE849 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52121E5B2805901600CAE849 /* CustomButton.swift */; };
+		5233779B280AC01C001563DA /* GameSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233779A280AC01C001563DA /* GameSingleton.swift */; };
 		525931192805DEC60028838F /* TitleMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931162805DEC60028838F /* TitleMenuView.swift */; };
 		5259311A2805DEC60028838F /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931172805DEC60028838F /* PauseView.swift */; };
 		5259311B2805DEC60028838F /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525931182805DEC60028838F /* SliderView.swift */; };
@@ -40,6 +41,7 @@
 		52121E5628057DF800CAE849 /* WinContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinContentView.swift; sourceTree = "<group>"; };
 		52121E5928057E0F00CAE849 /* WinContentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinContentScene.swift; sourceTree = "<group>"; };
 		52121E5B2805901600CAE849 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		5233779A280AC01C001563DA /* GameSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSingleton.swift; sourceTree = "<group>"; };
 		525931162805DEC60028838F /* TitleMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleMenuView.swift; sourceTree = "<group>"; };
 		525931172805DEC60028838F /* PauseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
 		525931182805DEC60028838F /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				82AEAB1B2807324A00B25FE6 /* Player */,
 				82AEAB1A2807320B00B25FE6 /* Levels */,
 				82E5E5092804641E00E823FF /* GameScene.sks */,
+				5233779A280AC01C001563DA /* GameSingleton.swift */,
 				82E5E50A2804641E00E823FF /* GameScene.swift */,
 			);
 			name = Maze;
@@ -235,6 +238,7 @@
 				82E5E50C2804641E00E823FF /* GameScene.swift in Sources */,
 				525C42D42808615500D434C6 /* HomeContentScene.swift in Sources */,
 				525D6F6328072002000FADC5 /* LevelsView.swift in Sources */,
+				5233779B280AC01C001563DA /* GameSingleton.swift in Sources */,
 				82AEAB14280731D300B25FE6 /* Maze_lv1.swift in Sources */,
 				525D6F5D2806FEA2000FADC5 /* HomeView.swift in Sources */,
 				52121E5828057DF800CAE849 /* WinContentView.swift in Sources */,
