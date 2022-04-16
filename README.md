@@ -4,12 +4,13 @@ iOS Foundation Program Final Challenge App
 ![projectLogo](link da aggiungere in futuro)
 
 ### Keynote
-[Keynoten Mid-term review](https://github.com/dennewbie/adaptation/blob/main/key/midterm_review_group_c.pdf)
+[Keynote mid review](https://github.com/dennewbie/adaptation/blob/main/key/midterm_review_group_c.pdf)
 
-[Keynoten Final pitch](link da aggiungere in futuro)
+[Keynote final review](link da aggiungere in futuro)
 
 ### Docs
-(da aggiungere in futuro)
+[CBL Canvas](https://github.com/dennewbie/adaptation/blob/main/doc/teamC_CBL_Canvas.pdf)
+[Guiding Questions](https://github.com/dennewbie/adaptation/blob/main/doc/guiding_questions_ios_team_c.pdf)
 
 ### Demo
 (da aggiungere in futuro)
