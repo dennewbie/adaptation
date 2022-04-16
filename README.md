@@ -1,15 +1,16 @@
 # adaptation
 iOS Foundation Program Final Challenge App
 
-![projectLogo](link da aggiungere in futuro)
+![projectLogo](https://github.com/dennewbie/adaptation/blob/main/design/AppIcon.png)
 
 ### Keynote
 [Keynote mid review](https://github.com/dennewbie/adaptation/blob/main/key/midterm_review_group_c.pdf)
 
-[Keynote final review](link da aggiungere in futuro)
+[Keynote final review](https://github.com/dennewbie/adaptation/blob/main/key/final_review_group_c.pdf)
 
 ### Docs
 [CBL Canvas](https://github.com/dennewbie/adaptation/blob/main/doc/teamC_CBL_Canvas.pdf)
+
 [Guiding Questions](https://github.com/dennewbie/adaptation/blob/main/doc/guiding_questions_ios_team_c.pdf)
 
 ### Demo
