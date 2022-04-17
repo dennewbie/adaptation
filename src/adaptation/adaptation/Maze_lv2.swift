@@ -1,14 +1,14 @@
 //
-//  Maze_lv1.swift
+//  Maze_lv2.swift
 //  adaptation
 //
-//  Created by Simone Cioffi on 13/04/22.
+//  Created by Simone Cioffi on 17/04/22.
 //
 
 import Foundation
 import SpriteKit
 
-class MazeLV1 : Maze{
+class MazeLV2 : Maze{
     private var obstacleNode = SKNode()
     private var obstaclesSpriteNodes: [[SKSpriteNode?]]
     private var startSpriteNode = SKSpriteNode()
@@ -18,20 +18,20 @@ class MazeLV1 : Maze{
     
     override init(m: Int, n: Int, scene: SKScene) {
         self.obstaclesSpriteNodes =
-        [[nil, nil, nil, nil, nil, nil, nil, nil, nil                                                           ], // Walls
-         [nil, nil, nil, SKSpriteNode(), nil, nil, nil, startSpriteNode, nil                                    ],
-         [nil, nil, SKSpriteNode(), SKSpriteNode(), nil, SKSpriteNode(), SKSpriteNode(), nil, nil               ],
-         [nil, nil, nil, nil, nil, SKSpriteNode(), SKSpriteNode(), nil, nil                                     ],
-         [nil, SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), nil, nil, nil, nil, nil                          ],
-         [nil, SKSpriteNode(), nil, nil, nil, nil, SKSpriteNode(), SKSpriteNode(), nil                          ],
-         [nil, nil, nil, SKSpriteNode(), nil, nil, SKSpriteNode(), endSpriteNode, nil                           ],
-         [nil, nil, SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), nil, SKSpriteNode(), nil, nil               ],
-         [nil, nil, nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil, nil                                     ],
-         [nil, SKSpriteNode(), nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil, nil                          ],
-         [nil, nil, nil, SKSpriteNode(), nil, SKSpriteNode(), SKSpriteNode(), nil, nil                          ],
-         [nil, nil, nil, nil, nil, nil, nil, nil, nil                                                           ],
-         [nil, SKSpriteNode(), nil, SKSpriteNode(), SKSpriteNode(), nil, SKSpriteNode(), SKSpriteNode(), nil    ],
-         [nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil                          ]
+        [[nil, nil, nil, nil, nil, nil, nil, nil, nil], // Walls
+         [nil, nil, nil, SKSpriteNode(), nil, nil, nil, startSpriteNode, nil],
+         [nil, nil, SKSpriteNode(), SKSpriteNode(), nil, SKSpriteNode(), SKSpriteNode(), nil, nil],
+         [nil, nil, nil, nil, nil, SKSpriteNode(), SKSpriteNode(), nil, nil],
+         [nil, SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), nil, nil, nil, nil, nil],
+         [nil, SKSpriteNode(), nil, nil, nil, nil, SKSpriteNode(), SKSpriteNode(), nil],
+         [nil, nil, nil, SKSpriteNode(), nil, nil, SKSpriteNode(), endSpriteNode, nil ],
+         [nil, nil, SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), nil, SKSpriteNode(), nil, nil],
+         [nil, nil, nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil, nil],
+         [nil, SKSpriteNode(), nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil, nil],
+         [nil, nil, nil, SKSpriteNode(), nil, SKSpriteNode(), SKSpriteNode(), nil, nil],
+         [nil, nil, nil, nil, nil, nil, nil, nil, nil],
+         [nil, SKSpriteNode(), nil, SKSpriteNode(), SKSpriteNode(), nil, SKSpriteNode(),SKSpriteNode(),nil],
+         [nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil]
         ]
         startPosition = CGPoint()
         endPosition = CGPoint()
@@ -84,7 +84,7 @@ class MazeLV1 : Maze{
         return endPosition
     }
     
-    override public func getMatrix() -> [[SKSpriteNode?]]{
+   override public func getMatrix() -> [[SKSpriteNode?]]{
         return obstaclesSpriteNodes
     }
     
@@ -92,3 +92,4 @@ class MazeLV1 : Maze{
         obstacleNode.removeAllChildren()
     }
 }
+

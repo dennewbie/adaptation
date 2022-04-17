@@ -13,7 +13,7 @@ class GameScene: SKScene {
     var endPosition: CGPoint = CGPoint()
     //    var obstacles :[SKSpriteNode] = [SKSpriteNode]()
     var previousTime = TimeInterval()
-    var floor: MazeLV1?
+    var floor: Maze?
     let playerSpeed = 2.1
     var randomObstacle = SKNode()
     var mySingleton: GameSingleton = GameSingleton.shared

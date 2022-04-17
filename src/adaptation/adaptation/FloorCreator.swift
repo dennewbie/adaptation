@@ -83,4 +83,19 @@ class Maze{
         self.mazeSize = CGSize(width: 170 * m + 1, height: 170 * m + 1)
         scene.addChild(floorTiles)
     }
+     public func getStartPox() -> CGPoint {
+         return CGPoint()
+     }
+     
+     
+     public func getEndPox() -> CGPoint {
+         return CGPoint()
+     }
+     
+     public func getMatrix() -> [[SKSpriteNode?]]{
+         return [[SKSpriteNode()]]
+     }
+     
+     public func deleteMatrix()  {
+     }
 }
