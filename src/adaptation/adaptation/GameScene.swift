@@ -31,9 +31,20 @@ class GameScene: SKScene {
         self.addChild(instructionLabel)
         
         
-        
         // Create maze
-        floor = MazeLV1(m: 14, n: 8, scene: scene!)
+        switch (GameSingleton.shared.getCurrentLevel()) {
+        case 1:
+            floor = MazeLV1(m: 14, n: 8, scene: scene!)
+        case 2:
+            floor = MazeLV2(m: 14, n: 8, scene: scene!)
+        case 3:
+            floor = MazeLV3(m: 14, n: 8, scene: scene!)
+        case 4: break
+            //            floor = MazeLV4(m: 14, n: 8, scene: scene!)
+        default:
+            print("Error retrieving the correct level from GameSingleton")
+        }
+        
         endPosition = (floor?.getEndPox())!
         // User Init
         player.UserInit(scene: scene!, start: (floor?.getStartPox())!)
@@ -60,74 +71,74 @@ class GameScene: SKScene {
                         if (obstacles[i][j] != nil) {
                             var randomObj = Float.random(in: 0...1)
                             if (randomObj >= 0.5){
-                            if (obstacles[i + 1][j] == nil || obstacles[i - 1][j] == nil || obstacles[i][j - 1] == nil ||  obstacles[i][j + 1] == nil) {
-                                var randomInteger = Int.random(in: 0...3)
-                                switch randomInteger {
-                                case 0:
-                                    if (obstacles[i + 1][j] == nil && player.getUser().position != obstacles[i + 1][j]?.position) {
-                                        let obstacleTileFloor = SKSpriteNode(imageNamed: "obstacleTileFloor")
-                                        obstacleTileFloor.position.x = (obstacles[i][j]?.position.x)!
-                                        obstacleTileFloor.position.y = (obstacles[i][j]?.position.y)!-100
-                                        obstacleTileFloor.size = obstacles[i][j]!.size
-                                        obstacleTileFloor.physicsBody = SKPhysicsBody(rectangleOf: obstacleTileFloor.size)
-                                        obstacleTileFloor.physicsBody?.affectedByGravity = false
-                                        obstacleTileFloor.physicsBody?.allowsRotation = false
-                                        obstacleTileFloor.physicsBody?.isDynamic = false
-                                        obstacleTileFloor.physicsBody?.restitution = 0
-                                        randomObstacle.addChild(obstacleTileFloor)
-                                    } else {
-                                        randomInteger = randomInteger + 1
+                                if (obstacles[i + 1][j] == nil || obstacles[i - 1][j] == nil || obstacles[i][j - 1] == nil ||  obstacles[i][j + 1] == nil) {
+                                    var randomInteger = Int.random(in: 0...3)
+                                    switch randomInteger {
+                                    case 0:
+                                        if (obstacles[i + 1][j] == nil && player.getUser().position != obstacles[i + 1][j]?.position) {
+                                            let obstacleTileFloor = SKSpriteNode(imageNamed: "obstacleTileFloor")
+                                            obstacleTileFloor.position.x = (obstacles[i][j]?.position.x)!
+                                            obstacleTileFloor.position.y = (obstacles[i][j]?.position.y)!-100
+                                            obstacleTileFloor.size = obstacles[i][j]!.size
+                                            obstacleTileFloor.physicsBody = SKPhysicsBody(rectangleOf: obstacleTileFloor.size)
+                                            obstacleTileFloor.physicsBody?.affectedByGravity = false
+                                            obstacleTileFloor.physicsBody?.allowsRotation = false
+                                            obstacleTileFloor.physicsBody?.isDynamic = false
+                                            obstacleTileFloor.physicsBody?.restitution = 0
+                                            randomObstacle.addChild(obstacleTileFloor)
+                                        } else {
+                                            randomInteger = randomInteger + 1
+                                        }
+                                    case 1:
+                                        if (obstacles[i - 1][j] == nil && player.getUser().position != obstacles[i - 1][j]?.position) {
+                                            let obstacleTileFloor = SKSpriteNode(imageNamed: "obstacleTileFloor")
+                                            obstacleTileFloor.position.x = (obstacles[i][j]?.position.x)!
+                                            obstacleTileFloor.position.y = (obstacles[i][j]?.position.y)!+100
+                                            obstacleTileFloor.size = obstacles[i][j]!.size
+                                            obstacleTileFloor.physicsBody = SKPhysicsBody(rectangleOf: obstacleTileFloor.size)
+                                            obstacleTileFloor.physicsBody?.affectedByGravity = false
+                                            obstacleTileFloor.physicsBody?.allowsRotation = false
+                                            obstacleTileFloor.physicsBody?.isDynamic = false
+                                            obstacleTileFloor.physicsBody?.restitution = 0
+                                            randomObstacle.addChild(obstacleTileFloor)
+                                        }else {
+                                            randomInteger = randomInteger + 1
+                                        }
+                                    case 2:
+                                        if (obstacles[i][j - 1] == nil && player.getUser().position != obstacles[i][j-1]?.position) {
+                                            let obstacleTileFloor = SKSpriteNode(imageNamed: "obstacleTileFloor")
+                                            obstacleTileFloor.position.x = (obstacles[i][j]?.position.x)!-100
+                                            obstacleTileFloor.position.y = (obstacles[i][j]?.position.y)!
+                                            obstacleTileFloor.size = obstacles[i][j]!.size
+                                            obstacleTileFloor.physicsBody = SKPhysicsBody(rectangleOf: obstacleTileFloor.size)
+                                            obstacleTileFloor.physicsBody?.affectedByGravity = false
+                                            obstacleTileFloor.physicsBody?.allowsRotation = false
+                                            obstacleTileFloor.physicsBody?.isDynamic = false
+                                            obstacleTileFloor.physicsBody?.restitution = 0
+                                            randomObstacle.addChild(obstacleTileFloor)
+                                        } else {
+                                            randomInteger = randomInteger + 1
+                                        }
+                                    case 3:
+                                        if (obstacles[i][j + 1] == nil && player.getUser().position != obstacles[i][j+1]?.position) {
+                                            let obstacleTileFloor = SKSpriteNode(imageNamed: "obstacleTileFloor")
+                                            obstacleTileFloor.position.x = (obstacles[i][j]?.position.x)!+100
+                                            obstacleTileFloor.position.y = (obstacles[i][j]?.position.y)!
+                                            obstacleTileFloor.size = obstacles[i][j]!.size
+                                            obstacleTileFloor.physicsBody = SKPhysicsBody(rectangleOf: obstacleTileFloor.size)
+                                            obstacleTileFloor.physicsBody?.affectedByGravity = false
+                                            obstacleTileFloor.physicsBody?.allowsRotation = false
+                                            obstacleTileFloor.physicsBody?.isDynamic = false
+                                            obstacleTileFloor.physicsBody?.restitution = 0
+                                            randomObstacle.addChild(obstacleTileFloor)
+                                        } else {
+                                            randomInteger = randomInteger + 1
+                                        }
+                                        
+                                    default:
+                                        print("Error. Integer not corresponding to any case")
                                     }
-                                case 1:
-                                    if (obstacles[i - 1][j] == nil && player.getUser().position != obstacles[i - 1][j]?.position) {
-                                        let obstacleTileFloor = SKSpriteNode(imageNamed: "obstacleTileFloor")
-                                        obstacleTileFloor.position.x = (obstacles[i][j]?.position.x)!
-                                        obstacleTileFloor.position.y = (obstacles[i][j]?.position.y)!+100
-                                        obstacleTileFloor.size = obstacles[i][j]!.size
-                                        obstacleTileFloor.physicsBody = SKPhysicsBody(rectangleOf: obstacleTileFloor.size)
-                                        obstacleTileFloor.physicsBody?.affectedByGravity = false
-                                        obstacleTileFloor.physicsBody?.allowsRotation = false
-                                        obstacleTileFloor.physicsBody?.isDynamic = false
-                                        obstacleTileFloor.physicsBody?.restitution = 0
-                                        randomObstacle.addChild(obstacleTileFloor)
-                                    }else {
-                                        randomInteger = randomInteger + 1
-                                    }
-                                case 2:
-                                    if (obstacles[i][j - 1] == nil && player.getUser().position != obstacles[i][j-1]?.position) {
-                                        let obstacleTileFloor = SKSpriteNode(imageNamed: "obstacleTileFloor")
-                                        obstacleTileFloor.position.x = (obstacles[i][j]?.position.x)!-100
-                                        obstacleTileFloor.position.y = (obstacles[i][j]?.position.y)!
-                                        obstacleTileFloor.size = obstacles[i][j]!.size
-                                        obstacleTileFloor.physicsBody = SKPhysicsBody(rectangleOf: obstacleTileFloor.size)
-                                        obstacleTileFloor.physicsBody?.affectedByGravity = false
-                                        obstacleTileFloor.physicsBody?.allowsRotation = false
-                                        obstacleTileFloor.physicsBody?.isDynamic = false
-                                        obstacleTileFloor.physicsBody?.restitution = 0
-                                        randomObstacle.addChild(obstacleTileFloor)
-                                    } else {
-                                        randomInteger = randomInteger + 1
-                                    }
-                                case 3:
-                                    if (obstacles[i][j + 1] == nil && player.getUser().position != obstacles[i][j+1]?.position) {
-                                        let obstacleTileFloor = SKSpriteNode(imageNamed: "obstacleTileFloor")
-                                        obstacleTileFloor.position.x = (obstacles[i][j]?.position.x)!+100
-                                        obstacleTileFloor.position.y = (obstacles[i][j]?.position.y)!
-                                        obstacleTileFloor.size = obstacles[i][j]!.size
-                                        obstacleTileFloor.physicsBody = SKPhysicsBody(rectangleOf: obstacleTileFloor.size)
-                                        obstacleTileFloor.physicsBody?.affectedByGravity = false
-                                        obstacleTileFloor.physicsBody?.allowsRotation = false
-                                        obstacleTileFloor.physicsBody?.isDynamic = false
-                                        obstacleTileFloor.physicsBody?.restitution = 0
-                                        randomObstacle.addChild(obstacleTileFloor)
-                                    } else {
-                                        randomInteger = randomInteger + 1
-                                    }
-                                    
-                                default:
-                                    print("Error. Integer not corresponding to any case")
                                 }
-                            }
                             }
                         }
                     }
