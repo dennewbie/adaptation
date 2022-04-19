@@ -33,7 +33,7 @@ class GameScene: SKScene {
         
         
         // Create maze
-        floor = MazeLV2(m: 14, n: 8, scene: scene!)
+        floor = MazeLV3(m: 14, n: 8, scene: scene!)
         endPosition = (floor?.getEndPox())!
         // User Init
         player.UserInit(scene: scene!, start: (floor?.getStartPox())!)

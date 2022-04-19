@@ -32,6 +32,7 @@
 		82AEAB14280731D300B25FE6 /* Maze_lv1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AEAB13280731D300B25FE6 /* Maze_lv1.swift */; };
 		82AEAB16280731DD00B25FE6 /* FloorCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AEAB15280731DD00B25FE6 /* FloorCreator.swift */; };
 		82AEAB18280731E600B25FE6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AEAB17280731E600B25FE6 /* User.swift */; };
+		82D34C63280EF2E30096A9FD /* Maze_lv3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D34C62280EF2E30096A9FD /* Maze_lv3.swift */; };
 		82E5E50B2804641E00E823FF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 82E5E5092804641E00E823FF /* GameScene.sks */; };
 		82E5E50C2804641E00E823FF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E5E50A2804641E00E823FF /* GameScene.swift */; };
 		DBB948982805B86F0036C0FA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB948972805B86F0036C0FA /* SettingsView.swift */; };
@@ -65,6 +66,7 @@
 		82AEAB13280731D300B25FE6 /* Maze_lv1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Maze_lv1.swift; path = adaptation/Maze_lv1.swift; sourceTree = SOURCE_ROOT; };
 		82AEAB15280731DD00B25FE6 /* FloorCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorCreator.swift; sourceTree = "<group>"; };
 		82AEAB17280731E600B25FE6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		82D34C62280EF2E30096A9FD /* Maze_lv3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maze_lv3.swift; sourceTree = "<group>"; };
 		82E5E5092804641E00E823FF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		82E5E50A2804641E00E823FF /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		DBB948972805B86F0036C0FA /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				820059C5280C3AFC001E0D8A /* Maze_lv2.swift */,
 				82AEAB13280731D300B25FE6 /* Maze_lv1.swift */,
+				82D34C62280EF2E30096A9FD /* Maze_lv3.swift */,
 			);
 			name = levels;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				82AEAB18280731E600B25FE6 /* User.swift in Sources */,
 				525D6F6228072002000FADC5 /* SingleLevelsView.swift in Sources */,
 				52121E5C2805901700CAE849 /* CustomButton.swift in Sources */,
+				82D34C63280EF2E30096A9FD /* Maze_lv3.swift in Sources */,
 				525931192805DEC60028838F /* TitleMenuView.swift in Sources */,
 				52BD73FB280409130080A6F9 /* adaptationApp.swift in Sources */,
 				52121E5A28057E0F00CAE849 /* WinContentScene.swift in Sources */,
