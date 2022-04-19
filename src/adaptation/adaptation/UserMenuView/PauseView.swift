@@ -12,7 +12,7 @@ struct PauseView: View {
     let alertHeigth: CGFloat = 350
     let alertWidth: CGFloat = 350
     let firstButtonSymbol: String = String("house.circle")
-    let secondButtonSymbol: String = String("play.circle")
+    let secondButtonSymbol: String = String("repeat.circle")
     var body: some View {
         CustomAlert(alertTitle: alertTitle, alertHeigth: alertHeigth, alertWidth: alertWidth, firstButtonSymbol: firstButtonSymbol, secondButtonSymbol: secondButtonSymbol, alertType: 1)
     }
