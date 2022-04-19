@@ -25,7 +25,7 @@ class MazeLV2 : Maze{
          [nil, nil, SKSpriteNode(), nil, SKSpriteNode(), nil, nil, nil, nil],
          [nil, nil ,SKSpriteNode(), nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil],
          [nil, nil, nil, nil, nil, SKSpriteNode(), nil, SKSpriteNode(), nil ],
-         [nil, nil, SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), nil, SKSpriteNode(), nil, nil],
+         [nil, nil, SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), nil, nil, nil, nil],
          [nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil, SKSpriteNode(), nil, nil],
          [nil, SKSpriteNode(), SKSpriteNode(), nil, nil, nil, SKSpriteNode(), nil, nil],
          [nil, SKSpriteNode(), SKSpriteNode(), nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil],

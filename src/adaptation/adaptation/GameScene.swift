@@ -33,7 +33,7 @@ class GameScene: SKScene {
         
         
         // Create maze
-        floor = MazeLV3(m: 14, n: 8, scene: scene!)
+        floor = MazeLV1(m: 14, n: 8, scene: scene!)
         endPosition = (floor?.getEndPox())!
         // User Init
         player.UserInit(scene: scene!, start: (floor?.getStartPox())!)
@@ -52,15 +52,16 @@ class GameScene: SKScene {
         
         let obstacles: [[SKSpriteNode?]] = floor!.getMatrix()
         if (previousTime>=0) {
-            if ((currentTime - previousTime) > 5) {
+            if ((currentTime - previousTime) > 3) {
                 randomObstacle.removeAllChildren()
                 previousTime = currentTime
                 for i in 2..<12 {
                     for j in 2..<6 {
                         if (obstacles[i][j] != nil) {
+                            var randomObj = Float.random(in: 0...1)
+                            if (randomObj >= 0.5){
                             if (obstacles[i + 1][j] == nil || obstacles[i - 1][j] == nil || obstacles[i][j - 1] == nil ||  obstacles[i][j + 1] == nil) {
                                 var randomInteger = Int.random(in: 0...3)
-                                debugPrint(randomInteger)
                                 switch randomInteger {
                                 case 0:
                                     if (obstacles[i + 1][j] == nil && player.getUser().position != obstacles[i + 1][j]?.position) {
@@ -126,6 +127,7 @@ class GameScene: SKScene {
                                 default:
                                     print("Error. Integer not corresponding to any case")
                                 }
+                            }
                             }
                         }
                     }
