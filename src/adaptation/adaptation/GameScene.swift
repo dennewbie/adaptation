@@ -39,8 +39,8 @@ class GameScene: SKScene {
             floor = MazeLV2(m: 14, n: 8, scene: scene!)
         case 3:
             floor = MazeLV3(m: 14, n: 8, scene: scene!)
-        case 4: break
-            //            floor = MazeLV4(m: 14, n: 8, scene: scene!)
+        case 4:
+            floor = MazeLV3(m: 14, n: 8, scene: scene!)
         default:
             print("Error retrieving the correct level from GameSingleton")
         }
@@ -63,13 +63,13 @@ class GameScene: SKScene {
         
         let obstacles: [[SKSpriteNode?]] = floor!.getMatrix()
         if (previousTime>=0) {
-            if ((Int) (currentTime - previousTime) > 6 - GameSingleton.shared.getCurrentLevel()) {
+            if ((Int) (currentTime - previousTime) > 5 - GameSingleton.shared.getCurrentLevel()) {
                 randomObstacle.removeAllChildren()
                 previousTime = currentTime
                 for i in 2..<12 {
                     for j in 2..<6 {
                         if (obstacles[i][j] != nil) {
-                            var randomObj = Float.random(in: 0...1)
+                            let randomObj = Float.random(in: 0...1)
                             if (randomObj >= 0.5){
                                 if (obstacles[i + 1][j] == nil || obstacles[i - 1][j] == nil || obstacles[i][j - 1] == nil ||  obstacles[i][j + 1] == nil) {
                                     var randomInteger = Int.random(in: 0...3)
