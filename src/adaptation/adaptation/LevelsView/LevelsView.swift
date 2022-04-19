@@ -30,6 +30,9 @@ struct LevelsView: View {
                             }, imageName: "arrowshape.turn.up.backward.circle", buttonHeight: 65, buttonWidth: 65, buttonAlignment: .topLeading, buttonColor: availableLevelColor, systemImage: true)
                         }
                     }
+                    .frame(width: 70, height: 70, alignment: .topLeading)
+                    .position(x: 30, y: 30)
+                    
                     
                     VStack {
                         Text("Levels")
@@ -37,9 +40,10 @@ struct LevelsView: View {
                             .fontWeight(.bold)
                             .font(.system(size: 40))
                     }
+                    .frame(width: UIScreen.screenWidth - 100, height: UIScreen.screenHeight / 5, alignment: .topLeading)
+                    .position(x: (UIScreen.screenWidth / 2) - UIScreen.screenHeight / 8.5, y: UIScreen.screenHeight / 10)
                 }
-                .padding(.top, 0)
-                .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight / 5, alignment: .topLeading)
+                .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight / 5, alignment: .top)
                 
                 VStack {
                     HStack {
