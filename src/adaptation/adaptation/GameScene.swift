@@ -30,10 +30,20 @@ class GameScene: SKScene {
         }
         self.addChild(instructionLabel)
         
-        
-        
         // Create maze
-        floor = MazeLV3(m: 14, n: 8, scene: scene!)
+        switch (GameSingleton.shared.getCurrentLevel()) {
+        case 1:
+            floor = MazeLV1(m: 14, n: 8, scene: scene!)
+        case 2:
+            floor = MazeLV2(m: 14, n: 8, scene: scene!)
+        case 3:
+            floor = MazeLV3(m: 14, n: 8, scene: scene!)
+        case 4: break
+//            floor = MazeLV4(m: 14, n: 8, scene: scene!)
+        default:
+            print("Error retrieving the correct level from GameSingleton")
+        }
+    
         endPosition = (floor?.getEndPox())!
         // User Init
         player.UserInit(scene: scene!, start: (floor?.getStartPox())!)
