@@ -63,10 +63,6 @@ struct CentralBlock: View {
         VStack {
             HomeSpriteView()
                 .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight / 2.5, alignment: .center)
-            Text("Adaptation")
-                .font(.system(size: 40, weight: .bold, design: .default))
-                .multilineTextAlignment(.center)
-                .padding(.bottom, 20)
         }
         .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight / 3.5, alignment: .center)
     }

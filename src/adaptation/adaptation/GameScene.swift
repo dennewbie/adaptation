@@ -52,7 +52,7 @@ class GameScene: SKScene {
         
         let obstacles: [[SKSpriteNode?]] = floor!.getMatrix()
         if (previousTime>=0) {
-            if ((currentTime - previousTime) > 3) {
+            if ((Int) (currentTime - previousTime) > 6 - GameSingleton.shared.getCurrentLevel()) {
                 randomObstacle.removeAllChildren()
                 previousTime = currentTime
                 for i in 2..<12 {
