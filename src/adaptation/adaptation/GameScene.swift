@@ -33,7 +33,7 @@ class GameScene: SKScene {
         
         
         // Create maze
-        floor = MazeLV1(m: 14, n: 8, scene: scene!)
+        floor = MazeLV2(m: 14, n: 8, scene: scene!)
         endPosition = (floor?.getEndPox())!
         // User Init
         player.UserInit(scene: scene!, start: (floor?.getStartPox())!)
@@ -78,7 +78,7 @@ class GameScene: SKScene {
                                         randomInteger = randomInteger + 1
                                     }
                                 case 1:
-                                    if (obstacles[i - 1][j] == nil && player.getUser().position != obstacles[i + 1][j]?.position) {
+                                    if (obstacles[i - 1][j] == nil && player.getUser().position != obstacles[i - 1][j]?.position) {
                                         let obstacleTileFloor = SKSpriteNode(imageNamed: "obstacleTileFloor")
                                         obstacleTileFloor.position.x = (obstacles[i][j]?.position.x)!
                                         obstacleTileFloor.position.y = (obstacles[i][j]?.position.y)!+100
@@ -93,7 +93,7 @@ class GameScene: SKScene {
                                         randomInteger = randomInteger + 1
                                     }
                                 case 2:
-                                    if (obstacles[i][j - 1] == nil && player.getUser().position != obstacles[i + 1][j]?.position) {
+                                    if (obstacles[i][j - 1] == nil && player.getUser().position != obstacles[i][j-1]?.position) {
                                         let obstacleTileFloor = SKSpriteNode(imageNamed: "obstacleTileFloor")
                                         obstacleTileFloor.position.x = (obstacles[i][j]?.position.x)!-100
                                         obstacleTileFloor.position.y = (obstacles[i][j]?.position.y)!
@@ -108,7 +108,7 @@ class GameScene: SKScene {
                                         randomInteger = randomInteger + 1
                                     }
                                 case 3:
-                                    if (obstacles[i][j + 1] == nil && player.getUser().position != obstacles[i + 1][j]?.position) {
+                                    if (obstacles[i][j + 1] == nil && player.getUser().position != obstacles[i][j+1]?.position) {
                                         let obstacleTileFloor = SKSpriteNode(imageNamed: "obstacleTileFloor")
                                         obstacleTileFloor.position.x = (obstacles[i][j]?.position.x)!+100
                                         obstacleTileFloor.position.y = (obstacles[i][j]?.position.y)!

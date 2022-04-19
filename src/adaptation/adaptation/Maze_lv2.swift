@@ -19,19 +19,19 @@ class MazeLV2 : Maze{
     override init(m: Int, n: Int, scene: SKScene) {
         self.obstaclesSpriteNodes =
         [[nil, nil, nil, nil, nil, nil, nil, nil, nil], // Walls
-         [nil, nil, nil, SKSpriteNode(), nil, nil, nil, startSpriteNode, nil],
-         [nil, nil, SKSpriteNode(), SKSpriteNode(), nil, SKSpriteNode(), SKSpriteNode(), nil, nil],
-         [nil, nil, nil, nil, nil, SKSpriteNode(), SKSpriteNode(), nil, nil],
-         [nil, SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), nil, nil, nil, nil, nil],
-         [nil, SKSpriteNode(), nil, nil, nil, nil, SKSpriteNode(), SKSpriteNode(), nil],
-         [nil, nil, nil, SKSpriteNode(), nil, nil, SKSpriteNode(), endSpriteNode, nil ],
+         [nil, SKSpriteNode(),SKSpriteNode(),SKSpriteNode(),SKSpriteNode(), nil, nil, nil, nil],
+         [nil, nil, nil,nil, SKSpriteNode(), nil, SKSpriteNode(), SKSpriteNode(), nil],
+         [nil, endSpriteNode, SKSpriteNode(), nil, nil, nil,nil, nil, nil],
+         [nil, nil, SKSpriteNode(), nil, SKSpriteNode(), nil, nil, nil, nil],
+         [nil, nil ,SKSpriteNode(), nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil],
+         [nil, nil, nil, nil, nil, SKSpriteNode(), nil, SKSpriteNode(), nil ],
          [nil, nil, SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), nil, SKSpriteNode(), nil, nil],
-         [nil, nil, nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil, nil],
-         [nil, SKSpriteNode(), nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil, nil],
-         [nil, nil, nil, SKSpriteNode(), nil, SKSpriteNode(), SKSpriteNode(), nil, nil],
+         [nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil, SKSpriteNode(), nil, nil],
+         [nil, SKSpriteNode(), SKSpriteNode(), nil, nil, nil, SKSpriteNode(), nil, nil],
+         [nil, SKSpriteNode(), SKSpriteNode(), nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil],
          [nil, nil, nil, nil, nil, nil, nil, nil, nil],
-         [nil, SKSpriteNode(), nil, SKSpriteNode(), SKSpriteNode(), nil, SKSpriteNode(),SKSpriteNode(),nil],
-         [nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil, nil, SKSpriteNode(), nil]
+         [nil, nil, SKSpriteNode(), SKSpriteNode(), nil, SKSpriteNode(), nil,SKSpriteNode(),nil],
+         [nil, startSpriteNode, SKSpriteNode(), nil, nil, nil, nil, nil, nil]
         ]
         startPosition = CGPoint()
         endPosition = CGPoint()
