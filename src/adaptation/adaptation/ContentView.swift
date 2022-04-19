@@ -28,17 +28,24 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            ZStack {
-                SpriteView(scene: scene)
-                    .edgesIgnoringSafeArea(.all)
-                
-                NavigationLink(destination: PauseView(), tag: 40, selection: $selectedButton) {
-                    CustomButton(buttonAction: {
-                        print("pause btn")
-                        self.selectedButton = 40
-                    }, imageName: "pause.circle", buttonHeight: 60, buttonWidth: 60, buttonAlignment: .center, buttonColor: contentViewColor, systemImage: true)
-                    .position(x: UIScreen.screenWidth / 2, y: UIScreen.screenHeight - 70)
+            VStack {
+                VStack {
+                    SpriteView(scene: scene)
+                        .edgesIgnoringSafeArea(.all)
                 }
+                .position(x: UIScreen.screenWidth / 2, y: UIScreen.screenHeight / 2)
+                .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: .center)
+                
+                VStack {
+                    NavigationLink(destination: PauseView(), tag: 40, selection: $selectedButton) {
+                        CustomButton(buttonAction: {
+                            print("pause btn")
+                            self.selectedButton = 40
+                        }, imageName: "pause.circle", buttonHeight: 60, buttonWidth: 60, buttonAlignment: .center, buttonColor: contentViewColor, systemImage: true)
+                    }
+                }
+                .position(x: UIScreen.screenWidth / 2, y: -70)
+                .frame(width: UIScreen.screenWidth, height: 70, alignment: .center)
                 
                 NavigationLink(destination: WinContentView(), tag: 41, selection: $selectedButton) {
                     EmptyView()
@@ -49,7 +56,7 @@ struct ContentView: View {
                     self.selectedButton = 41
                 }
             })
-            .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: .center)
+            .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: .top)
             .edgesIgnoringSafeArea(.all)
             .onAppear(perform: {
                 playSound()

@@ -102,6 +102,7 @@ struct HomeView: View {
             let availableLevels: [Bool] = [true, false, false, false]
             UserDefaults.standard.set(availableLevels, forKey: "availableLevels")
             UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
+            UserDefaults.standard.set(0.5, forKey: "soundVolume")
         }
     }
     
