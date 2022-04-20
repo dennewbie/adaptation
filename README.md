@@ -5,6 +5,7 @@ iOS Foundation Program Final Challenge App
 According to recent research by McKinsey, the demand for soft skills by recruiters will increase by 30% by 2030. Soft skills will therefore increasingly determine the employability of the future. (McKinsey Global Institute, 2018)
 
 So the essential question is: can you learn a soft skill by playing a videogame? Different game genres help players develop sought after soft skills. Multiplayer team games allow people to cultivate collaboration, communication and leadership skills, while strategy games are more likely to emphasize problem-solving and lateral thinking. (ManpowerGroup)
+
 Learning no longer takes the form of a mere passive transfer of knowledge between a teacher and a learner, but in an active and conscious acquisition of new knowledge, through continuous and constant experimentation. These elements thus make learning an interesting and also "fun" experience. (“Assessment e Serious Game: Una nuova strada per valutare le Soft Skill?”, Barbara Benincasa - Federico II)
 
 So we develop an arcade videogame that helps learning adaptation to new graduates. The player must move through a maze that will continue to change. The maze is the headquarter of the company where the main character of the game works. 
